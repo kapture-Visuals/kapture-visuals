@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Camera, Film, Mail, Repeat2, Sparkles } from "lucide-react";
+import { ArrowRight, Camera, Film, Mail, Sparkles } from "lucide-react";
 
 const content = {
   siteName: "KAPTURE VISUALS",
@@ -129,9 +129,19 @@ export default function KaptureVisualsWebsite() {
               >
                 Start a project
               </motion.a>
+
+              <motion.a
+                whileHover={{ y: -3, scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
+                href={content.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Instagram
+              </motion.a>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -274,6 +284,9 @@ export default function KaptureVisualsWebsite() {
               <p className="mt-5 max-w-2xl text-white/80">
                 For cinematic shoots, event coverage, collaborations, early brand partnerships or any other creative projects built around motion and storytelling.
               </p>
+              <p className="mt-4 text-sm text-white/50">
+                Usually replying within one business day.
+              </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row md:flex-col">
               <motion.a
@@ -307,6 +320,100 @@ export default function KaptureVisualsWebsite() {
               </motion.a>
             </div>
           </div>
+
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            className="mt-10 rounded-[1.5rem] border border-white/10 bg-white/10 p-6 backdrop-blur-xl"
+          >
+            <input type="hidden" name="form-name" value="contact" />
+
+            <div className="grid gap-6">
+              <div>
+                <p className="mb-3 text-sm uppercase tracking-[0.25em] text-white/50">
+                  Contact Information
+                </p>
+
+                <div className="flex flex-wrap gap-4">
+                  <label className="flex items-center gap-2 text-sm text-white/80">
+                    <input type="radio" name="client_type" value="Business" required />
+                    Business
+                  </label>
+
+                  <label className="flex items-center gap-2 text-sm text-white/80">
+                    <input type="radio" name="client_type" value="Private individual" required />
+                    Individual
+                  </label>
+                </div>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-3">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Company / Name"
+                  required
+                  className="rounded-xl border border-white/10 bg-white px-4 py-3 text-sm text-black outline-none placeholder:text-black/40"
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                  className="rounded-xl border border-white/10 bg-white px-4 py-3 text-sm text-black outline-none placeholder:text-black/40"
+                />
+
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone number (optional)"
+                  className="rounded-xl border border-white/10 bg-white px-4 py-3 text-sm text-black outline-none placeholder:text-black/40"
+                />
+              </div>
+
+              <div>
+                <p className="mb-3 text-sm uppercase tracking-[0.25em] text-white/50">
+                  Project Type
+                </p>
+                  <p className="mb-2 text-xs text-white/40">
+                  Select all that apply.
+                </p>
+
+                <div className="grid gap-3 md:grid-cols-3">
+                  <label className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/80">
+                    <input type="checkbox" name="services" value="Photography" />
+                    Photography
+                  </label>
+
+                  <label className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/80">
+                    <input type="checkbox" name="services" value="Video Production" />
+                    Video Production
+                  </label>
+
+                  <label className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/80">
+                    <input type="checkbox" name="services" value="Cinematic Branding" />
+                    Cinematic Branding
+                  </label>
+                </div>
+              </div>
+
+              <textarea
+                name="message"
+                placeholder="Tell us about what you're looking to create. Include any details that will help us understand your vision."
+                rows="5"
+                className="rounded-xl border border-white/10 bg-white px-4 py-3 text-sm text-black outline-none placeholder:text-black/40"
+              />
+
+              <button
+                type="submit"
+                className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-white/90"
+              >
+                Send
+              </button>
+            </div>
+          </form>
         </div>
       </motion.section>
 
@@ -314,7 +421,7 @@ export default function KaptureVisualsWebsite() {
         <div className="mx-auto flex max-w-7xl flex-col items-center">
 
           <img
-            src="/images/icon.jpg"
+            src="/images/footer.jpg"
             alt="Kapture Visuals"
             className="mb-6 h-30 w-auto"
           />
