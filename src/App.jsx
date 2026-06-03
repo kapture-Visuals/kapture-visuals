@@ -6,9 +6,6 @@ const content = {
   siteName: "KAPTURE VISUALS",
   logo: "/images/logo.png",
   heroVideo: "/videos/hero.mp4",
-  heroTagline: "Ride. Shoot. Repeat.",
-  heroCardText:
-    "Kapturing what moves: cars, bikes, culture, and the moments in between.",
   work: [
     {
       title: "Automotive Stories",
@@ -48,7 +45,6 @@ const content = {
     "Kapture Visuals was born from the strong belief that automotive culture has always been more than cars objects. Behind every machine lies something deeply human: the pursuit of improvement, precision, ambition and self-expression.",
     "Cars and bikes hence become experiences, memories and gateways to new places and perspectives.",
     "Through cinematic and immersive content, Kapture Visuals explores the atmosphere surrounding automotive culture across Europe, documenting not only the machines themselves, but the emotion, energy and moments that exist around them.",
-    "Because while nature created the world around us, humans engineered the machines that keep it moving.",
   ],
   email: "kapture.visuals.production@gmail.com",
   instagram: "https://instagram.com/kapture.visuals.prod",
@@ -109,11 +105,11 @@ export default function KaptureVisualsWebsite() {
 
         <div className="relative mx-auto grid max-w-7xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
           <div>
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-7xl">
-              Cinematic <br />
-              stories built <br />
-              around motion.
-            </h1>
+              <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-7xl">
+                Cinematic <br />
+                stories built <br />
+                around motion.
+              </h1>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <motion.a
@@ -136,19 +132,6 @@ export default function KaptureVisualsWebsite() {
             </div>
           </div>
 
-          <motion.div
-            whileHover={{ y: -5, scale: 1.015 }}
-            transition={{ type: "spring", stiffness: 120, damping: 18 }}
-            className="rounded-[2rem] border border-white/10 bg-white/15 p-5 text-white backdrop-blur-xl"
-          >
-            <div className="flex items-center gap-3 text-white">
-              <span className="text-sm uppercase tracking-[0.25em]">{content.heroTagline}</span>
-            </div>
-
-            <p className="mt-6 text-2xl font-medium leading-snug text-white">
-              {content.heroCardText}
-            </p>
-          </motion.div>
         </div>
       </section>
 
@@ -244,7 +227,7 @@ export default function KaptureVisualsWebsite() {
           <img
             src={content.aboutImage}
             alt="Cinematic road"
-            className="h-[525px] w-full object-cover object-center opacity-99 transition duration-700 hover:scale-105"
+            className="h-[565px] w-full object-cover object-center opacity-99 transition duration-700 hover:scale-105"
           />
         </motion.div>
         <motion.div variants={fadeUp} transition={{ duration: 0.9, ease: "easeOut", delay: 0.12 }}>
@@ -262,6 +245,12 @@ export default function KaptureVisualsWebsite() {
               {paragraph}
             </p>
           ))}
+          <div className="mt-10 border-l-2 border-black/15 pl-6">
+            <p className="text-2xl italic font-medium text-black/80 leading-relaxed">
+              "While nature created the world around us,
+              humans engineered the machines that keep it moving."
+            </p>
+          </div>
         </motion.div>
       </motion.section>
 
@@ -321,8 +310,37 @@ export default function KaptureVisualsWebsite() {
         </div>
       </motion.section>
 
-      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-black/40">
-        © 2026 Kapture Visuals. All rights reserved.
+      <footer className="border-t border-black/10 px-6 py-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-center">
+
+          <img
+            src="/images/icon.jpg"
+            alt="Kapture Visuals"
+            className="mb-6 h-30 w-auto"
+          />
+
+          <div className="mb-5 flex items-center gap-8 text-sm text-black/50">
+            <a
+              href={content.instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-black"
+            >
+              Instagram
+            </a>
+
+            <a
+              href={`mailto:${content.email}`}
+              className="hover:text-black"
+            >
+              Contact
+            </a>
+          </div>
+
+          <p className="text-sm text-black/40">
+            © 2026 Kapture Visuals. All rights reserved.
+          </p>
+        </div>
       </footer>
     </main>
   );
