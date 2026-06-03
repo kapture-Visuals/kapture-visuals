@@ -17,13 +17,35 @@
       :root {
         --cc-bg: #ffffff;
         --cc-primary-color: #000000;
-        --cc-secondary-color: #ffffff;
+        --cc-secondary-color: #444444;
         --cc-btn-primary-bg: #000000;
         --cc-btn-primary-color: #ffffff;
         --cc-btn-secondary-bg: #ffffff;
         --cc-btn-secondary-color: #000000;
         --cc-btn-secondary-border-color: #000000;
         --cc-modal-border-radius: 18px;
+      }
+
+      #cc-main .cm {
+        max-width: none;
+        width: calc(100% - 48px);
+        margin: 0 24px 24px;
+        border-radius: 18px;
+      }
+
+      #cc-main .cm__body {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      #cc-main .cm__texts {
+        max-width: 760px;
+      }
+
+      #cc-main .cm__btns {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
       }
     </style>
   </head>
@@ -81,8 +103,8 @@
       CookieConsent.run({
         guiOptions: {
           consentModal: {
-            layout: "box",
-            position: "bottom right",
+            layout: "bar",
+            position: "bottom",
             equalWeightButtons: true,
             flipButtons: false
           },
@@ -109,9 +131,9 @@
           translations: {
             en: {
               consentModal: {
-                title: "Cookies & Privacy",
+                title: "Privacy Preferences",
                 description:
-                  "We use analytics cookies to understand how visitors interact with Kapture Visuals and improve the experience. No advertising cookies are used.",
+                  "Kapture Visuals uses analytics cookies and similar technologies to understand website traffic, improve performance and enhance the visitor experience. No advertising or marketing cookies are used. Learn more in our Privacy Policy and Cookie Policy.",
                 acceptAllBtn: "Accept Analytics",
                 acceptNecessaryBtn: "Reject",
                 showPreferencesBtn: "Manage Preferences"
