@@ -77,11 +77,11 @@ export default function KaptureVisualsWebsite() {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-black/30 backdrop-blur-xl"
+        className="fixed left-0 top-0 z-50 w-full border-b border-black/10 bg-white/10 backdrop-blur-xl"
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <img src={content.logo} alt={content.siteName} className="h-24 w-auto" />
-          <div className="hidden items-center gap-8 text-sm text-white/70 md:flex">
+          <div className="hidden items-center gap-8 text-sm text-white md:flex">
             <a href="#work" className="transition hover:text-white">Work</a>
             <a href="#services" className="transition hover:text-white">Services</a>
             <a href="#about" className="transition hover:text-white">About</a>
@@ -98,7 +98,7 @@ export default function KaptureVisualsWebsite() {
             loop
             playsInline
             preload="auto"
-            className="h-full w-full object-cover opacity-85"
+            className="h-full w-full object-cover opacity-99"
           >
             <source src={content.heroVideo} type="video/mp4" />
           </video>
@@ -109,7 +109,7 @@ export default function KaptureVisualsWebsite() {
 
         <div className="relative mx-auto grid max-w-7xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-end">
           <div>
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl">
+            <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-7xl lg:text-7xl">
               Cinematic <br />
               stories built <br />
               around motion.
@@ -129,7 +129,7 @@ export default function KaptureVisualsWebsite() {
                 whileHover={{ y: -3, scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Start a project
               </motion.a>
@@ -139,10 +139,9 @@ export default function KaptureVisualsWebsite() {
           <motion.div
             whileHover={{ y: -5, scale: 1.015 }}
             transition={{ type: "spring", stiffness: 120, damping: 18 }}
-            className="rounded-[2rem] border border-white/20 bg-black/30 p-5 text-white backdrop-blur-xl"
+            className="rounded-[2rem] border border-white/10 bg-white/15 p-5 text-white backdrop-blur-xl"
           >
-            <div className="flex items-center gap-3 text-white/70">
-              <Repeat2 className="h-5 w-5 animate-spin-low" />
+            <div className="flex items-center gap-3 text-white">
               <span className="text-sm uppercase tracking-[0.25em]">{content.heroTagline}</span>
             </div>
 
@@ -193,7 +192,7 @@ export default function KaptureVisualsWebsite() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 z-20 p-6">
                 <p className="text-sm text-white/70">{item.type}</p>
-                <h3 className="mt-2 text-2xl font-semibold text-black">{item.title}</h3>
+                <h3 className="mt-2 text-2xl font-semibold text-white">{item.title}</h3>
               </div>
             </motion.article>
           ))}
@@ -245,7 +244,7 @@ export default function KaptureVisualsWebsite() {
           <img
             src={content.aboutImage}
             alt="Cinematic road"
-            className="h-[655px] w-full object-cover object-center opacity-80 transition duration-700 hover:scale-105"
+            className="h-[525px] w-full object-cover object-center opacity-99 transition duration-700 hover:scale-105"
           />
         </motion.div>
         <motion.div variants={fadeUp} transition={{ duration: 0.9, ease: "easeOut", delay: 0.12 }}>
@@ -274,16 +273,16 @@ export default function KaptureVisualsWebsite() {
         viewport={{ once: true, amount: 0.35 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white p-8 text-neutral-950 md:p-12">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-black/10 bg-black p-8 text-white md:p-12">
           <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-neutral-500">
+              <p className="text-sm uppercase tracking-[0.35em] text-white/80">
                 Let's create together
               </p>
-              <h2 className="mt-3 text-4xl font-semibold text-black md:text-5xl">
-                Kapturing what moves people.
+              <h2 className="mt-3 text-4xl font-semibold text-white md:text-5xl">
+                Kapturing what moves.
               </h2>
-              <p className="mt-5 max-w-2xl text-neutral-600">
+              <p className="mt-5 max-w-2xl text-white/80">
                 For cinematic shoots, event coverage, collaborations, early brand partnerships or any other creative projects built around motion and storytelling.
               </p>
             </div>
@@ -292,7 +291,7 @@ export default function KaptureVisualsWebsite() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href={`mailto:${content.email}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-neutral-950 px-6 py-3 text-sm font-semibold text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black"
               >
                 <Mail className="h-4 w-4" /> Contact Us
               </motion.a>
@@ -300,7 +299,7 @@ export default function KaptureVisualsWebsite() {
                 whileHover={{ y: -3, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href={content.instagram}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-950"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black"
               >
                 <svg
                   className="h-4 w-4"
