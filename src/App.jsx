@@ -325,6 +325,7 @@ export default function KaptureVisualsWebsite() {
             name="contact"
             method="POST"
             data-netlify="true"
+            action="/thank-you"
             className="mt-10 rounded-[1.5rem] border border-white/10 bg-white/10 p-6 backdrop-blur-xl"
           >
             <input type="hidden" name="form-name" value="contact" />
