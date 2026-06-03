@@ -187,9 +187,9 @@ export default function KaptureVisualsWebsite() {
               <img
                 src={item.image}
                 alt={item.title}
-                className="absolute inset-0 h-full w-full object-cover opacity-80 transition duration-700 group-hover:scale-110 group-hover:opacity-100"
+                className="absolute inset-0 h-full w-full object-cover opacity-99 transition duration-700 group-hover:scale-110 group-hover:opacity-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 z-20 p-6">
                 <p className="text-sm text-white/70">{item.type}</p>
                 <h3 className="mt-2 text-2xl font-semibold text-white">{item.title}</h3>
