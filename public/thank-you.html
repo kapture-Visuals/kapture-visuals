@@ -7,14 +7,22 @@
 
   <style>
     body {
-      margin: 0;
-      background: #000;
-      color: white;
-      font-family: Inter, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, sans-serif;
+        color: white;
+
+        background-image:
+            linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+            url('/images/thank-you.jpg');
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .container {
@@ -29,14 +37,17 @@
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
     }
 
     p {
-      color: rgba(255,255,255,.7);
+      color: rgba(255,255,255,.92);
       line-height: 1.8;
-      margin-bottom: 30px;
+      max-width: 800 px;
+      margin: 0 auto 40px;
     }
 
     .buttons {
@@ -75,6 +86,12 @@
         background: rgba(255,255,255,.1);
         transform: translateY(-2px);
     }
+
+    .logo {
+        width: 260px;
+        height: auto;
+        margin-bottom: 50px;
+    }
   </style>
 </head>
   
@@ -82,13 +99,13 @@
 
   <div class="container">
 
-    <img src="/images/footer.jpg" alt="Kapture Visuals">
+    <img src="/images/thank-you.png" alt="Kapture Visuals" class="logo">
 
     <h1>Project received.</h1>
 
     <p>
       Thank you for reaching out.
-      You project request has been successfully submitted. We usually reply within one business day.
+      Your project request has been successfully submitted. We usually reply within one business day.
     </p>
 
     <div class="buttons">
