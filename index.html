@@ -2,33 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/favicon.jpg" />
+
+    <link rel="icon" type="image/jpeg" href="/images/favicon.jpg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kapture Visuals</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NXYEF7RM21"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'G-NXYEF7RM21');
-    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css"
+    />
 
-    <!-- Microsoft Clarity -->    
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x1azot4139");
-    </script>
+    <style>
+      :root {
+        --cc-bg: #ffffff;
+        --cc-primary-color: #000000;
+        --cc-secondary-color: #ffffff;
+        --cc-btn-primary-bg: #000000;
+        --cc-btn-primary-color: #ffffff;
+        --cc-btn-secondary-bg: #ffffff;
+        --cc-btn-secondary-color: #000000;
+        --cc-btn-secondary-border-color: #000000;
+        --cc-modal-border-radius: 18px;
+      }
+    </style>
   </head>
+
   <body>
     <form
       name="contact"
       method="POST"
-      action="thank-you.html"
+      action="/thank-you.html"
       netlify
       netlify-honeypot="bot-field"
       hidden
@@ -43,6 +47,114 @@
     </form>
 
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
+
+    <script type="module">
+      import "https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.esm.js";
+
+      const loadGoogleAnalytics = () => {
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-NXYEF7RM21";
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+
+        gtag("js", new Date());
+        gtag("config", "G-NXYEF7RM21");
+      };
+
+      const loadMicrosoftClarity = () => {
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);
+          t.async=1;
+          t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];
+          y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "x1azot4139");
+      };
+
+      CookieConsent.run({
+        guiOptions: {
+          consentModal: {
+            layout: "box",
+            position: "bottom right",
+            equalWeightButtons: true,
+            flipButtons: false
+          },
+          preferencesModal: {
+            layout: "box",
+            position: "right",
+            equalWeightButtons: true,
+            flipButtons: false
+          }
+        },
+
+        categories: {
+          necessary: {
+            enabled: true,
+            readOnly: true
+          },
+          analytics: {
+            enabled: false
+          }
+        },
+
+        language: {
+          default: "en",
+          translations: {
+            en: {
+              consentModal: {
+                title: "Cookies & Privacy",
+                description:
+                  "We use analytics cookies to understand how visitors interact with Kapture Visuals and improve the experience. No advertising cookies are used.",
+                acceptAllBtn: "Accept Analytics",
+                acceptNecessaryBtn: "Reject",
+                showPreferencesBtn: "Manage Preferences"
+              },
+              preferencesModal: {
+                title: "Cookie Preferences",
+                acceptAllBtn: "Accept Analytics",
+                acceptNecessaryBtn: "Reject",
+                savePreferencesBtn: "Save Preferences",
+                closeIconLabel: "Close",
+                sections: [
+                  {
+                    title: "Strictly Necessary Cookies",
+                    description:
+                      "These cookies are required for the website to function and cannot be disabled.",
+                    linkedCategory: "necessary"
+                  },
+                  {
+                    title: "Analytics Cookies",
+                    description:
+                      "These help us understand traffic sources, visits, clicks and how the website is used.",
+                    linkedCategory: "analytics"
+                  }
+                ]
+              }
+            }
+          }
+        },
+
+        onConsent: () => {
+          if (CookieConsent.acceptedCategory("analytics")) {
+            loadGoogleAnalytics();
+            loadMicrosoftClarity();
+          }
+        },
+
+        onChange: () => {
+          if (CookieConsent.acceptedCategory("analytics")) {
+            loadGoogleAnalytics();
+            loadMicrosoftClarity();
+          }
+        }
+      });
+    </script>
   </body>
 </html>
