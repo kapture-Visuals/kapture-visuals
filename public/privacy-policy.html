@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | Kapture Visuals</title>
+  <meta
+    name="description"
+    content="Privacy Policy for Kapture Visuals, explaining how personal data is collected, used, stored, and protected."
+  />
+
+  <link rel="icon" type="image/jpeg" href="/images/favicon.jpg" />
+
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --muted: rgba(0, 0, 0, 0.62);
+      --soft: rgba(0, 0, 0, 0.08);
+      --panel: #f5f5f5;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--soft);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      width: min(100%, 1280px);
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      height: 78px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.58);
+    }
+
+    .nav-links a:hover { color: var(--black); }
+
+    .hero {
+      border-bottom: 1px solid var(--soft);
+      background:
+        radial-gradient(circle at top right, rgba(0, 0, 0, 0.08), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+    }
+
+    .hero-inner {
+      width: min(100%, 1280px);
+      margin: 0 auto;
+      padding: 82px 24px 72px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 12px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.42);
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(44px, 8vw, 86px);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+      font-weight: 650;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 650;
+      transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    .button.primary {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(0, 0, 0, 0.14);
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--black);
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .page {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    .legal-card {
+      border: 1px solid var(--soft);
+      border-radius: 32px;
+      background: var(--white);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .legal-content { padding: clamp(28px, 5vw, 56px); }
+
+    .last-updated {
+      display: inline-flex;
+      margin-bottom: 34px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--panel);
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--soft);
+    }
+
+    section:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      font-weight: 650;
+    }
+
+    h3 {
+      margin: 26px 0 12px;
+      font-size: 20px;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .controller {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      background: var(--panel);
+    }
+
+    .controller p { margin: 0; }
+
+    .highlight-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .highlight-list li {
+      margin-bottom: 6px;
+    }
+
+    .resource-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .resource-list a {
+      display: block;
+      padding: 16px 18px;
+      border: 1px solid var(--soft);
+      border-radius: 18px;
+      color: rgba(0, 0, 0, 0.62);
+      background: var(--white);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .resource-list a:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 0, 0, 0.22);
+      color: var(--black);
+    }
+
+    .footer {
+      border-top: 1px solid var(--soft);
+      padding: 44px 24px;
+      text-align: center;
+    }
+
+    .footer img {
+      display: block;
+      height: 90px;
+      width: auto;
+      margin: 0 auto 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.55);
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover { color: var(--black); }
+
+    .copyright {
+      margin: 0;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.38);
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner { padding: 14px 18px; }
+      .logo { height: 64px; }
+      .nav-links { display: none; }
+      .hero-inner { padding: 64px 18px 54px; }
+      .page { padding: 48px 18px 72px; }
+      .legal-card { border-radius: 24px; }
+      section { padding: 28px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" aria-label="Kapture Visuals home">
+        <img src="/images/logo-black.jpg" alt="Kapture Visuals" class="logo" />
+      </a>
+
+      <div class="nav-links">
+        <a href="/#work">Work</a>
+        <a href="/#services">Services</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Legal information</p>
+      <h1>Privacy Policy.</h1>
+      <p class="hero-text">
+        This page explains how Kapture Visuals collects, uses, stores, and protects personal data when visitors use the website or submit a project enquiry through the contact form.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="/">Return Home</a>
+        <a class="button secondary" href="/cookie-policy.html">Cookie Policy</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="legal-card">
+      <div class="legal-content">
+        <span class="last-updated">Last updated: June 2026</span>
+
+        <section>
+          <h2>Introduction</h2>
+          <p>
+            This Privacy Policy explains how Kapture Visuals (“we”, “our”, or “us”) collects, uses, stores, and protects personal data when you visit our website
+            (<a href="https://kapturevisuals.netlify.app">https://kapturevisuals.netlify.app</a>) or interact with us through our contact form.
+          </p>
+          <p>
+            We are committed to processing personal data transparently, securely, and in compliance with Regulation (EU) 2016/679 (General Data Protection Regulation – GDPR) and all applicable Belgian and European data protection legislation.
+          </p>
+          <p>
+            This Privacy Policy applies to all services, forms, and interactions available through our website.
+          </p>
+        </section>
+
+        <section>
+          <h2>Data Controller</h2>
+          <p>The data controller responsible for processing personal data is:</p>
+          <div class="controller">
+            <p><strong>Kapture Visuals</strong></p>
+            <p>Email: <a href="mailto:kapture.visuals.production@gmail.com">kapture.visuals.production@gmail.com</a></p>
+            <p>Country of Operation: Belgium</p>
+            <p>Website: <a href="https://kapturevisuals.netlify.app">https://kapturevisuals.netlify.app</a></p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Personal Data Collected</h2>
+          <p>
+            Depending on your interaction with our website, we may collect different categories of personal data.
+          </p>
+
+          <h3>a. Information You Provide</h3>
+          <p>
+            When you contact us through our contact form, we may collect name, company name, email address, phone number (optional), service requested, and any information voluntarily included in your enquiry.
+          </p>
+
+          <h3>b. Technical and Usage Information</h3>
+          <p>
+            When you visit our website, we may automatically collect IP address, browser type and version, device information, operating system, pages visited, referring websites, website interaction data, cookie preferences, analytics information, and session and performance data.
+          </p>
+        </section>
+
+        <section>
+          <h2>Purposes and Legal Bases for Processing</h2>
+          <p>
+            In accordance with Article 6(1) of the GDPR, we process personal data only for specific, explicit, and legitimate purposes.
+          </p>
+
+          <h3>a. Management of Contact Requests and Project Enquiries</h3>
+          <p>
+            On the basis of pre-contractual measures taken at your request (Art. 6(1)(b) GDPR) or Kapture Visuals’ legitimate interest (Art. 6(1)(f) GDPR) in responding to enquiries received through the Website, Kapture Visuals may process your personal data in order to respond to your requests, contact you, follow up on communications, discuss potential projects or collaborations, and provide the information or services requested.
+          </p>
+
+          <h3>b. Client and Professional Relationship Management</h3>
+          <p>
+            On the basis of pre-contractual measures (Art. 6(1)(b) GDPR) or Kapture Visuals’ legitimate interest (Art. 6(1)(f) GDPR) in managing professional relationships, Kapture Visuals may process your personal data in order to communicate with you regarding our activities, manage ongoing projects, provide creative services, maintain professional exchanges, and organise potential collaborations or service engagements.
+          </p>
+
+          <h3>c. Website Security and Proper Functioning</h3>
+          <p>
+            On the basis of Kapture Visuals’ legitimate interest (Art. 6(1)(f) GDPR) in ensuring the security, stability, and proper functioning of the Website, Kapture Visuals may process certain technical data in order to detect potential security incidents, prevent fraud and abuse, maintain website integrity, and ensure the overall security of the Website and its services.
+          </p>
+
+          <h3>d. Statistical Analysis and Website Improvement</h3>
+          <p>
+            Subject to your consent where required (Art. 6(1)(a) GDPR) for analytics cookies and similar technologies, Kapture Visuals may process certain technical and usage data in order to measure website traffic, analyse visitor behaviour, improve user experience, optimise website performance, and enhance the content and services offered through the Website.
+          </p>
+        </section>
+
+        <section>
+          <h2>Contact Forms and Project Enquiries</h2>
+          <p>
+            Our website uses Netlify Forms to process contact form submissions.
+          </p>
+          <p>
+            When you submit a project enquiry, the information you provide is transmitted to and stored by Netlify on our behalf. We use this information solely to review enquiries, communicate with prospective clients, discuss projects and collaborations, and provide requested services.
+          </p>
+          <p>
+            We do not sell, rent, or share enquiry data for marketing purposes.
+          </p>
+        </section>
+
+        <section>
+          <h2>Google Analytics</h2>
+          <p>
+            Subject to your consent, we use Google Analytics 4 to understand how visitors interact with our website.
+          </p>
+          <p>
+            Google Analytics may collect information including pages visited, session duration, traffic sources, device and browser information, general geographic information, and website interaction data.
+          </p>
+          <p>
+            Google Analytics is activated only after consent has been provided.
+          </p>
+          <p>
+            Additional information can be found at:
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Microsoft Clarity</h2>
+          <p>
+            Subject to your consent, we use Microsoft Clarity to analyse website usability and visitor interactions. Microsoft Clarity may collect information including click activity, scroll behaviour, navigation patterns, session interaction data, and device and browser information.
+          </p>
+          <p>
+            Microsoft Clarity may use cookies and similar technologies, including local storage, session storage, browser identifiers, and network requests.
+          </p>
+          <p>
+            The information collected is used exclusively for analytics, usability improvements, and website optimisation.
+          </p>
+          <p>
+            Additional information can be found at:
+            <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer">https://privacy.microsoft.com/en-us/privacystatement</a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Recipients of Personal Data</h2>
+          <p>
+            To the extent necessary for the purposes described above, personal data may be processed by trusted service providers acting on our behalf, including:
+          </p>
+          <ul>
+            <li>Netlify (website hosting and form processing);</li>
+            <li>Google Analytics;</li>
+            <li>Microsoft Clarity;</li>
+            <li>IT service providers where required;</li>
+            <li>Legal, accounting, or professional advisors where necessary;</li>
+            <li>Competent public authorities when required by law.</li>
+          </ul>
+          <p>
+            All service providers are required to process personal data securely and in accordance with applicable data protection laws.
+          </p>
+        </section>
+
+        <section>
+          <h2>International Data Transfers</h2>
+          <p>
+            Certain service providers used by Kapture Visuals may process personal data outside the European Economic Area (EEA).
+          </p>
+          <p>In particular, personal data may be processed by:</p>
+          <ul>
+            <li>Netlify, Inc. (website hosting and contact form processing);</li>
+            <li>Google LLC (Google Analytics);</li>
+            <li>Microsoft Corporation (Microsoft Clarity).</li>
+          </ul>
+          <p>
+            These providers may store or process personal data on servers located in various jurisdictions, including the United States.
+          </p>
+          <p>
+            Where such transfers occur, we ensure appropriate safeguards are in place in accordance with Chapter V of the GDPR (Articles 44–50), including contractual clauses approved by the European Commission, adequacy decisions, and other legally recognised transfer mechanisms.
+          </p>
+          <p>
+            Kapture Visuals takes reasonable steps to ensure that international transfers provide an adequate level of protection consistent with applicable European data protection laws.
+          </p>
+        </section>
+
+        <section>
+          <h2>Data Retention</h2>
+          <p>
+            We retain personal data only for as long as necessary to fulfil the purposes described in this Privacy Policy and to comply with applicable legal obligations.
+          </p>
+          <p>Typical retention periods include:</p>
+          <ul>
+            <li>Contact form enquiries: up to 3 years after the last meaningful interaction;</li>
+            <li>Cookie consent records: for the duration of the consent cookie;</li>
+            <li>Analytics data: according to the retention settings configured within the relevant analytics platform;</li>
+            <li>Legal and accounting records: as required by applicable law.</li>
+          </ul>
+          <p>
+            At the end of the applicable retention period, data is securely deleted or anonymised.
+          </p>
+        </section>
+
+        <section>
+          <h2>Data Security</h2>
+          <p>
+            We implement appropriate technical and organisational measures designed to protect personal data against unauthorised access, accidental loss, destruction, disclosure, alteration, and misuse.
+          </p>
+          <p>
+            While we take reasonable steps to safeguard personal data, no internet transmission or electronic storage method can be guaranteed to be completely secure.
+          </p>
+        </section>
+
+        <section>
+          <h2>Your Rights</h2>
+          <p>
+            Under the GDPR, you may have the following rights regarding your personal data:
+          </p>
+
+          <h3>a. Right of Access</h3>
+          <p>Request confirmation that your personal data is being processed and obtain a copy.</p>
+
+          <h3>b. Right to Rectification</h3>
+          <p>Request correction of inaccurate or incomplete data.</p>
+
+          <h3>c. Right to Erasure</h3>
+          <p>Request deletion of personal data in certain circumstances.</p>
+
+          <h3>d. Right to Restriction of Processing</h3>
+          <p>Request that processing be temporarily limited.</p>
+
+          <h3>e. Right to Object</h3>
+          <p>Object to certain processing activities based on legitimate interests.</p>
+
+          <h3>f. Right to Data Portability</h3>
+          <p>Receive personal data in a structured, commonly used, and machine-readable format.</p>
+
+          <h3>g. Right to Withdraw Consent</h3>
+          <p>Withdraw consent at any time where processing is based on consent.</p>
+
+          <p>
+            Requests regarding your rights may be submitted to:
+            <a href="mailto:kapture.visuals.production@gmail.com">kapture.visuals.production@gmail.com</a>
+          </p>
+          <p>
+            We may request reasonable proof of identity before processing certain requests.
+          </p>
+        </section>
+
+        <section>
+          <h2>Complaints to the Belgian Data Protection Authority</h2>
+          <p>
+            If you believe that the processing of your personal data violates applicable data protection laws, you have the right to lodge a complaint with:
+          </p>
+          <div class="controller">
+            <p><strong>Autorité de protection des données (APD)</strong></p>
+            <p>Rue de la Presse 35</p>
+            <p>1000 Bruxelles</p>
+            <p>Email: <a href="mailto:contact@apd-gba.be">contact@apd-gba.be</a></p>
+            <p>Website: <a href="https://www.autoriteprotectiondonnees.be/" target="_blank" rel="noopener noreferrer">https://www.autoriteprotectiondonnees.be/</a></p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Cookies</h2>
+          <p>
+            Our website uses cookies and similar technologies. For detailed information regarding the cookies used on this website, please consult our
+            <a href="/cookie-policy.html">Cookie Policy</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy periodically to reflect legal, technical, or operational developments. Any updates will be published on this page together with a revised “Last updated” date.
+          </p>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <p>
+            If you have any questions regarding this Privacy Policy or the processing of personal data, please contact:
+          </p>
+          <div class="controller">
+            <p><strong>Kapture Visuals</strong></p>
+            <p>Email: <a href="mailto:kapture.visuals.production@gmail.com">kapture.visuals.production@gmail.com</a></p>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <img src="/images/logo-black.jpg" alt="Kapture Visuals" />
+
+    <div class="footer-links">
+      <a href="https://instagram.com/kapture.visuals.prod" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="mailto:kapture.visuals.production@gmail.com">Contact</a>
+      <a href="/cookie-policy.html">Cookie Policy</a>
+    </div>
+
+    <p class="copyright">© 2026 Kapture Visuals. All rights reserved.</p>
+  </footer>
+</body>
+</html>

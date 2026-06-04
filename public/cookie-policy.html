@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cookie Policy | Kapture Visuals</title>
+  <meta
+    name="description"
+    content="Cookie Policy for Kapture Visuals, explaining how cookies and similar technologies are used on the website."
+  />
+
+  <link rel="icon" type="image/jpeg" href="/images/favicon.jpg" />
+
+  <style>
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --muted: rgba(0, 0, 0, 0.62);
+      --soft: rgba(0, 0, 0, 0.08);
+      --panel: #f5f5f5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--white);
+      color: var(--black);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--soft);
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      width: min(100%, 1280px);
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      height: 78px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.58);
+    }
+
+    .nav-links a:hover {
+      color: var(--black);
+    }
+
+    .hero {
+      border-bottom: 1px solid var(--soft);
+      background:
+        radial-gradient(circle at top right, rgba(0, 0, 0, 0.08), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f6f6f6 100%);
+    }
+
+    .hero-inner {
+      width: min(100%, 1280px);
+      margin: 0 auto;
+      padding: 82px 24px 72px;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 12px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.42);
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0;
+      font-size: clamp(44px, 8vw, 86px);
+      line-height: 0.94;
+      letter-spacing: -0.06em;
+      font-weight: 650;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 650;
+      transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+
+    .button.primary {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .button.secondary {
+      border: 1px solid rgba(0, 0, 0, 0.14);
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--black);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .page {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    .legal-card {
+      border: 1px solid var(--soft);
+      border-radius: 32px;
+      background: var(--white);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+    }
+
+    .legal-content {
+      padding: clamp(28px, 5vw, 56px);
+    }
+
+    .last-updated {
+      display: inline-flex;
+      margin-bottom: 34px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--panel);
+      color: rgba(0, 0, 0, 0.55);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 34px 0;
+      border-top: 1px solid var(--soft);
+    }
+
+    section:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      font-weight: 650;
+    }
+
+    h3 {
+      margin: 26px 0 12px;
+      font-size: 20px;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    ul {
+      margin: 14px 0 0;
+      padding-left: 22px;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+
+    .controller {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      padding: 22px;
+      border-radius: 24px;
+      background: var(--panel);
+    }
+
+    .controller p {
+      margin: 0;
+    }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin-top: 18px;
+      border: 1px solid var(--soft);
+      border-radius: 22px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      background: var(--white);
+    }
+
+    th,
+    td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--soft);
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    th {
+      background: #f7f7f7;
+      color: rgba(0, 0, 0, 0.58);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 700;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    code {
+      border-radius: 8px;
+      background: #f2f2f2;
+      padding: 2px 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    .resource-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .resource-list a {
+      display: block;
+      padding: 16px 18px;
+      border: 1px solid var(--soft);
+      border-radius: 18px;
+      color: rgba(0, 0, 0, 0.62);
+      background: var(--white);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      overflow-wrap: anywhere;
+    }
+
+    .resource-list a:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0, 0, 0, 0.22);
+      color: var(--black);
+    }
+
+    .footer {
+      border-top: 1px solid var(--soft);
+      padding: 44px 24px;
+      text-align: center;
+    }
+
+    .footer img {
+      display: block;
+      height: 90px;
+      width: auto;
+      margin: 0 auto 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.55);
+    }
+
+    .footer-links a:hover {
+      color: var(--black);
+    }
+
+    .copyright {
+      margin: 0;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.38);
+    }
+
+    @media (max-width: 760px) {
+      .nav-inner {
+        padding: 14px 18px;
+      }
+
+      .logo {
+        height: 64px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-inner {
+        padding: 64px 18px 54px;
+      }
+
+      .page {
+        padding: 48px 18px 72px;
+      }
+
+      .legal-card {
+        border-radius: 24px;
+      }
+
+      section {
+        padding: 28px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" aria-label="Kapture Visuals home">
+        <img src="/images/logo-black.jpg" alt="Kapture Visuals" class="logo" />
+      </a>
+
+      <div class="nav-links">
+        <a href="/#work">Work</a>
+        <a href="/#services">Services</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Legal information</p>
+      <h1>Cookie Policy.</h1>
+      <p class="hero-text">
+        This page explains how Kapture Visuals uses cookies and similar technologies to keep the website functional, remember privacy preferences, and analyse website usage only where consent has been provided.
+      </p>
+
+      <div class="actions">
+        <a class="button primary" href="/">Return Home</a>
+        <a class="button secondary" href="/privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="legal-card">
+      <div class="legal-content">
+        <span class="last-updated">Last updated: June 2026</span>
+
+        <section>
+          <h2>Introduction</h2>
+          <p>
+            This Cookie Policy explains how Kapture Visuals (“we”, “our”, or “us”) uses cookies and similar technologies when you visit our website:
+            <a href="https://kapturevisuals.netlify.app">https://kapturevisuals.netlify.app</a>.
+          </p>
+          <p>
+            We use cookies to ensure the website functions properly, remember your privacy preferences, and, where you have given your consent, understand how visitors interact with our website.
+          </p>
+          <p>This Cookie Policy has been prepared in accordance with:</p>
+          <ul>
+            <li>Regulation (EU) 2016/679 (General Data Protection Regulation - GDPR);</li>
+            <li>Directive 2002/58/EC (ePrivacy Directive);</li>
+            <li>Applicable Belgian data protection and electronic communications legislation;</li>
+            <li>Guidance issued by the European Data Protection Board (EDPB) and the Belgian Data Protection Authority (APD).</li>
+          </ul>
+          <p>
+            This policy intends to provide you with clear and transparent information about the cookies we use, their purposes, how long they are stored, as well as your rights and the options available to you for managing them.
+          </p>
+        </section>
+
+        <section>
+          <h2>Data Controller</h2>
+          <p>The data controller responsible for processing personal data is:</p>
+
+          <div class="controller">
+            <p><strong>Kapture Visuals</strong></p>
+            <p>Email: <a href="mailto:kapture.visuals.production@gmail.com">kapture.visuals.production@gmail.com</a></p>
+            <p>Country of Operation: Belgium</p>
+            <p>Website: <a href="https://kapturevisuals.netlify.app">https://kapturevisuals.netlify.app</a></p>
+          </div>
+        </section>
+
+        <section>
+          <h2>What Are Cookies?</h2>
+          <p>
+            Cookies are small text files stored on your device when you visit a website.
+          </p>
+          <p>
+            They help websites function correctly, improve user experience, remember preferences, and provide information about website usage.
+          </p>
+          <p>
+            Cookies may be placed directly by Kapture Visuals (“first-party cookies”) or by trusted third-party service providers (“third-party cookies”).
+          </p>
+        </section>
+
+        <section>
+          <h2>Types of Cookies Used</h2>
+
+          <h3>a. Essential Cookies</h3>
+          <p>
+            These cookies are essential for the proper functioning of the Site and cannot be disabled in our systems. They enable the website to save your privacy preferences and ensure the proper technical functioning of the features offered.
+          </p>
+          <p>
+            These cookies do not require your prior consent.
+          </p>
+
+          <h3>b. Analytics Cookies</h3>
+          <p>
+            These cookies allow us to measure the Site’s traffic and analyse how visitors use our pages to improve our content, services, and the Site’s performance. The data collected is generally aggregated and anonymized.
+          </p>
+          <p>
+            These cookies are only placed with your prior consent.
+          </p>
+        </section>
+
+        <section>
+          <h2>Cookie List</h2>
+
+          <h3>a. Essential Cookies</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cookie Name</th>
+                  <th>Provider</th>
+                  <th>Retention Period</th>
+                  <th>Purpose</th>
+                  <th>Legal Basis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>cc_cookie</code></td>
+                  <td>Kapture Visuals / CookieConsent</td>
+                  <td>182 days</td>
+                  <td>Stores the visitor’s cookie preferences and consent choices.</td>
+                  <td>Legitimate interest (Art. 6(1)(f) GDPR)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>b. Analytics Cookies</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cookie Name</th>
+                  <th>Provider</th>
+                  <th>Retention Period</th>
+                  <th>Purpose</th>
+                  <th>Legal Basis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>_ga</code></td>
+                  <td>Google Analytics</td>
+                  <td>Up to 2 years</td>
+                  <td>Distinguishes visitors and generates statistical data regarding website usage.</td>
+                  <td>Consent (Art. 6(1)(a) GDPR)</td>
+                </tr>
+                <tr>
+                  <td><code>_ga_NXYEF7RM21</code></td>
+                  <td>Google Analytics</td>
+                  <td>Up to 2 years</td>
+                  <td>Stores session state and measurement data associated with the Kapture Visuals Google Analytics property.</td>
+                  <td>Consent (Art. 6(1)(a) GDPR)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            Google Analytics and Microsoft Clarity may use cookies and similar browser technologies, including local storage, session storage and browser identifiers, to analyse website traffic and visitor interactions. These technologies are activated only after the user has provided consent.
+          </p>
+        </section>
+
+        <section>
+          <h2>Google Analytics</h2>
+          <p>
+            We use Google Analytics 4 to understand how visitors interact with our website. Google Analytics may collect information such as pages visited, time spent on pages, device and browser information, general geographic information, traffic sources, IP anonymization and privacy-focused settings where available.
+          </p>
+          <p>
+            Google Analytics is only activated after your consent.
+          </p>
+          <p>
+            For more information:
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Microsoft Clarity</h2>
+          <p>
+            We use Microsoft Clarity to better understand how visitors interact with our website and identify opportunities to improve user experience. Microsoft Clarity may collect information such as click activity, scroll behaviour, navigation patterns, device and browser information, and session interaction data.
+          </p>
+          <p>
+            Microsoft Clarity may use cookies and similar technologies, including local storage, session storage and browser-based identifiers, to collect and process information regarding website usage. The information collected is used exclusively for website analytics, usability improvements and performance optimisation.
+          </p>
+          <p>
+            Microsoft Clarity is only activated after your consent.
+          </p>
+          <p>
+            For more information:
+            <a href="https://privacy.microsoft.com" target="_blank" rel="noopener noreferrer">https://privacy.microsoft.com</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>Consent Management</h2>
+          <p>When you first visit our website, a cookie banner allows you to:</p>
+          <ul>
+            <li>Accept analytics cookies;</li>
+            <li>Reject analytics cookies;</li>
+            <li>Customize your preferences.</li>
+          </ul>
+          <p>
+            No analytics cookies are placed until you have provided consent.
+          </p>
+          <p>
+            Your choice is stored and can be modified at any time through the cookie settings feature available on the website.
+          </p>
+        </section>
+
+        <section>
+          <h2>Managing Cookies Through Your Browser</h2>
+          <p>
+            Most browsers allow you to view stored cookies, delete cookies, block cookies and receive notifications before cookies are placed.
+          </p>
+          <p>Useful resources:</p>
+
+          <div class="resource-list">
+            <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer">Chrome: https://support.google.com/chrome/answer/95647</a>
+            <a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies" target="_blank" rel="noopener noreferrer">Firefox: https://support.mozilla.org/fr/kb/activer-desactiver-cookies</a>
+            <a href="https://support.apple.com/fr-fr/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer">Safari: https://support.apple.com/fr-fr/guide/safari/sfri11471/mac</a>
+            <a href="https://support.microsoft.com/fr-fr/microsoft-edge" target="_blank" rel="noopener noreferrer">Edge: https://support.microsoft.com/fr-fr/microsoft-edge</a>
+            <a href="https://help.opera.com" target="_blank" rel="noopener noreferrer">Opera: https://help.opera.com</a>
+          </div>
+
+          <p>
+            Please note that disabling certain cookies may affect website functionality.
+          </p>
+        </section>
+
+        <section>
+          <h2>Changes to This Cookie Policy</h2>
+          <p>
+            We may update this Cookie Policy periodically to reflect legal, technical, or operational developments. Any updates will be published on this page together with a revised “Last updated” date.
+          </p>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <p>
+            If you have any questions regarding this Cookie Policy or the processing of personal data, please contact:
+          </p>
+          <div class="controller">
+            <p><strong>Kapture Visuals</strong></p>
+            <p>Email: <a href="mailto:kapture.visuals.production@gmail.com">kapture.visuals.production@gmail.com</a></p>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <img src="/images/logo-black.jpg" alt="Kapture Visuals" />
+
+    <div class="footer-links">
+      <a href="https://instagram.com/kapture.visuals.prod" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="mailto:kapture.visuals.production@gmail.com">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+    </div>
+
+    <p class="copyright">© 2026 Kapture Visuals. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -4,7 +4,7 @@ import { ArrowRight, Camera, Film, Mail, Sparkles } from "lucide-react";
 
 const content = {
   siteName: "KAPTURE VISUALS",
-  logo: "/images/logo.png",
+  logo: "/images/logo-white.jpg",
   heroVideo: "/videos/hero.mp4",
   work: [
     {
@@ -422,7 +422,7 @@ export default function KaptureVisualsWebsite() {
         <div className="mx-auto flex max-w-7xl flex-col items-center">
 
           <img
-            src="/images/footer.jpg"
+            src="/images/logo-black.jpg"
             alt="Kapture Visuals"
             className="mb-6 h-30 w-auto"
           />
@@ -442,6 +442,20 @@ export default function KaptureVisualsWebsite() {
               className="hover:text-black"
             >
               Contact
+            </a>
+
+            <a
+              href="/privacy-policy.html"
+              className="hover:text-black"
+            >
+              Privacy Policy
+          </a>
+ 
+            <a
+              href="/cookie-policy.html"
+              className="hover:text-black"
+            >
+              Cookie Policy
             </a>
           </div>
 
