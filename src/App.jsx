@@ -47,7 +47,7 @@ const content = {
     "Through cinematic and immersive content, Kapture Visuals explores the atmosphere surrounding automotive culture across Europe, documenting not only the machines themselves, but the emotion, energy and moments that exist around them.",
   ],
   email: "kapture.visuals.production@gmail.com",
-  instagram: "https://instagram.com/kapture.visuals.prod",
+  instagram: "https://instagram.com/kapture.visuals.eu",
 };
 
 function ServiceIcon({ type }) {

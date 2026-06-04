@@ -41,7 +41,7 @@
     <meta
       property="og:image"
       content="https://kapturevisuals.netlify.app/images/og-image.jpg"
-    />^
+    />
 
     <meta
       property="og:image:secure_url"
@@ -75,6 +75,8 @@
 
     <meta name="twitter:card" content="summary_large_image" />
 
+    <meta name="twitter:url" content="https://kapturevisuals.netlify.app/" />
+
     <meta
       name="twitter:title"
       content="Kapture Visuals | Automotive Photography & Filmmaking"
@@ -89,6 +91,40 @@
       name="twitter:image"
       content="https://kapturevisuals.netlify.app/images/og-image.jpg"
     />
+
+    <!-- Structured Data -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Kapture Visuals",
+      "url": "https://kapturevisuals.netlify.app/",
+      "logo": "https://kapturevisuals.netlify.app/images/logo-black.jpg",
+      "image": "https://kapturevisuals.netlify.app/images/og-image.jpg",
+      "description": "Cinematic automotive photography and filmmaking across Europe.",
+      "email": "kapture.visuals.production@gmail.com",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Europe"
+      },
+      "sameAs": [
+        "https://www.instagram.com/kapture.visuals.eu"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Noah Azzouzi"
+      },
+      "serviceType": [
+        "Automotive Photography",
+        "Automotive Filmmaking",
+        "Cinematic Branding"
+      ],
+      "sameAs": [
+        "https://instagram.com/kapture.visuals.eu"
+      ]
+    }
+    </script>
 
     <link
       rel="stylesheet"
@@ -220,7 +256,7 @@
                     Learn more in our <a href="/privacy-policy.html">Privacy Policy</a> and
                     <a href="/cookie-policy.html">Cookie Policy</a>.
                     `,
-                  acceptAllBtn: "Accept Analytics",
+                acceptAllBtn: "Accept Analytics",
                 acceptNecessaryBtn: "Reject",
                 showPreferencesBtn: "Manage Preferences"
               },
