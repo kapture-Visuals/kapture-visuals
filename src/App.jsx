@@ -490,7 +490,7 @@ export default function KaptureVisualsWebsite() {
 
               <div>
                 <p className="mb-3 text-sm uppercase tracking-[0.25em] text-white/50">
-                  Project Type
+                  Project Information
                 </p>
                   <p className="mb-2 text-xs text-white/40">
                   Select all that apply.
