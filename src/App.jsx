@@ -81,10 +81,14 @@ const stats = [
 ];
 
 const logos = [
-  "/images/logos/logo1.png",
-  "/images/logos/logo2.png",
-  "/images/logos/logo3.png",
-  "/images/logos/logo4.png",
+  "/logos/logo-Hall of Fame.png",
+  "/logos/logo-BAS.png",
+  "/logos/logo-GR8.png",
+  "/logos/logo-Rupteur2.0 Trackday.png",
+  "/logos/logo-Motor Valley Fest.png",
+  "/logos/logo-London Concours.png",
+  "/logos/logo-24H Le Mans.png", 
+  "/logos/logo-Supercar Madness.png",
 ];
 
 export default function KaptureVisualsWebsite() {
@@ -316,8 +320,17 @@ export default function KaptureVisualsWebsite() {
               key={index}
               src={logo}
               alt="Partner Logo"
-              className="h-16 w-auto object-contain opacity-60 transition hover:opacity-100"
-            />
+              className="
+                h-16
+                md:h-20
+                w-auto
+                object-contain
+                opacity-100
+                transition-all
+                duration-300
+                hover:scale-105
+              "
+               />
           ))}
 
         </div>
