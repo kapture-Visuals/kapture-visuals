@@ -97,31 +97,43 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Kapture Visuals",
-      "url": "https://kapturevisuals.eu/",
-      "logo": "https://kapturevisuals.eu/images/logo-black.jpg",
-      "image": "https://kapturevisuals.eu/images/og-image.jpg",
-      "description": "Cinematic automotive photography and filmmaking across Europe.",
-      "email": "kapture.visuals.production@gmail.com",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Europe"
-      },
-      "serviceType": [
-        "Automotive Photography",
-        "Automotive Filmmaking",
-        "Cinematic Branding"
-      ],
-      "sameAs": [
-        "https://instagram.com/kapture.visuals.eu"
-      ],
-      "founder": {
-        "@type": "Person",
-        "name": "Noah Azzouzi"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://kapturevisuals.eu/#organization",
+          "name": "Kapture Visuals",
+          "url": "https://kapturevisuals.eu/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://kapturevisuals.eu/images/logo-black.jpg"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://kapturevisuals.eu/images/og-image.jpg"
+          },
+          "description": "Cinematic automotive photography and filmmaking across Europe.",
+          "email": "kapture.visuals.production@gmail.com",
+          "founder": {
+            "@type": "Person",
+            "name": "Noah Azzouzi"
+          },
+          "sameAs": [
+            "https://instagram.com/kapture.visuals.eu"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://kapturevisuals.eu/#website",
+          "name": "Kapture Visuals",
+          "url": "https://kapturevisuals.eu/",
+          "publisher": {
+            "@id": "https://kapturevisuals.eu/#organization"
+          },
+          "inLanguage": "en"
+        }
+      ]
     }
-    </script>
+  </script>
 
     <link
       rel="stylesheet"
