@@ -61,12 +61,54 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
+const stats = [
+  {
+    value: "12+",
+    label: "Projects Captured",
+  },
+  {
+    value: "5+",
+    label: "Countries Explored",
+  },
+  {
+    value: "50+",
+    label: "Visuals Stories Told",
+  },
+  {
+    value: "100+",
+    label: "Hours Behind the Camera",
+  },
+];
+
+const logos = [
+  "/images/logos/logo1.png",
+  "/images/logos/logo2.png",
+  "/images/logos/logo3.png",
+  "/images/logos/logo4.png",
+];
+
 export default function KaptureVisualsWebsite() {
   return (
     <main className="min-h-screen bg-white text-black">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap');
-        html { scroll-behavior: smooth; }
+        
+        html { scroll-behavior: smooth;
+        }
+        
+        @keyframes marquee {
+          from {
+            transform: translateX(0);
+          }
+
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
+        .animate-marquee {
+          animation: marquee 25s linear infinite;
+        }
       `}</style>
 
       <motion.nav
@@ -74,8 +116,8 @@ export default function KaptureVisualsWebsite() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed left-0 top-0 z-50 w-full border-b border-black/10 bg-white/10 backdrop-blur-xl"
-      >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      > 
+        <div className="mt-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">
           <img src={content.logo} alt={content.siteName} className="h-24 w-auto" />
           <div className="hidden items-center gap-8 text-sm text-white md:flex">
             <a href="#work" className="transition hover:text-white">Work</a>
@@ -190,7 +232,79 @@ export default function KaptureVisualsWebsite() {
             </motion.article>
           ))}
         </div>
+
+      <motion.div
+        variants={fadeUp}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="mt-12"
+      >
+
+        <h2 className="text-sm uppercase tracking-[0.35em] text-black/40">
+          The Journey So Far
+        </h2>
+
+        <h2 className="mt-3 text-4xl font-semibold tracking-tight text-black md:text-5xl">
+          Kapture Visuals In Numbers.
+        </h2>
+
+      </motion.div>
+
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
+        {stats.map((item) => (
+          <motion.div
+            key={item.label}
+            variants={fadeUp}
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.25 }}
+            className="rounded-[2rem] border border-black/10 bg-neutral-50 p-10"
+          >
+            <div className="text-5xl font-semibold tracking-tight text-black md:text-6xl">
+              {item.value}
+            </div>
+
+            <div className="mt-4 text-xs uppercase tracking-[0.25em] text-black/40">
+              {item.label}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
       </motion.section>
+
+      {/* Featured At */}
+
+      <section className="overflow-hidden border-y border-black/10 bg-white py-20">
+
+        <div className="mx-auto max-w-7xl">
+
+          <p className="text-sm uppercase tracking-[0.35em] text-black/40">
+            Featured At
+          </p>
+
+          <h2 className="mt-3 text-4xl font-semibold tracking-tight text-black md:text-5xl">
+            Events & Collaborations.
+          </h2>
+
+        </div>
+
+        <div className="mt-12 overflow-hidden">
+
+        <div className="flex w-max animate-marquee gap-20">
+
+          {[...logos, ...logos].map((logo, index) => (
+            <img
+              key={index}
+              src={logo}
+              alt="Partner Logo"
+              className="h-16 w-auto object-contain opacity-60 transition hover:opacity-100"
+            />
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
 
       <motion.section
         id="services"
