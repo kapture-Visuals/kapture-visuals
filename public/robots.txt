@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kapturevisuals.netlify.app/sitemap.xml
+Sitemap: https://kapturevisuals.eu/sitemap.xml
