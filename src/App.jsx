@@ -116,18 +116,36 @@ export default function KaptureVisualsWebsite() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed left-0 top-0 z-50 w-full border-b border-black/10 bg-white/10 backdrop-blur-xl"
-      > 
-        <div className="mt-3 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          <img src={content.logo} alt={content.siteName} className="h-24 w-auto" />
-          <div className="hidden items-center gap-8 text-sm text-white md:flex">
-            <a href="#work" className="transition hover:text-white">Work</a>
-            <a href="#services" className="transition hover:text-white">Services</a>
-            <a href="#about" className="transition hover:text-white">About</a>
-            <a href="#contact" className="transition hover:text-white">Contact</a>
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <a href="/" aria-label="Kapture Visuals home">
+            <img
+              src={content.logo}
+              alt={content.siteName}
+              className="h-24 w-auto"
+            />
+          </a>
+
+          <div className="hidden items-center gap-8 text-sm font-semibold text-white md:flex">
+            <a href="#work" className="transition hover:text-white/70">
+              Work
+            </a>
+            <a href="#featured" className="transition hover:text-white/70">
+              Featured
+            </a>
+            <a href="#services" className="transition hover:text-white/70">
+              Services
+            </a>
+            <a href="#about" className="transition hover:text-white/70">
+              About
+            </a>
+            <a href="#contact" className="transition hover:text-white/70">
+              Contact
+            </a>
           </div>
         </div>
       </motion.nav>
-
+ 
       <section className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24">
         <div className="absolute inset-0">
           <video
@@ -273,7 +291,9 @@ export default function KaptureVisualsWebsite() {
 
       {/* Featured At */}
 
-      <section className="overflow-hidden border-y border-black/10 bg-white py-20">
+      <section
+        id="featured"
+        className="overflow-hidden border-y border-black/10 bg-white py-20">
 
         <div className="mx-auto max-w-7xl">
 
