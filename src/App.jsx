@@ -61,6 +61,12 @@ const fadeUp = {
   visible: { opacity: 1, y: 0 },
 };
 
+const trackEvent = (eventName, parameters = {}) => {
+  if (typeof window !== "undefined" && typeof window.gtag === "function") {
+    window.gtag("event", eventName, parameters);
+  }
+};
+
 const stats = [
   {
     value: "12+",
@@ -89,6 +95,8 @@ const logos = [
   "/logos/logo-London Concours.png",
   "/logos/logo-24H Le Mans.png", 
   "/logos/logo-Supercar Madness.png",
+  "/logos/logo-Chantilly.png",
+  "/logos/logo-Zoute Grand Prix.png",
 ];
 
 export default function KaptureVisualsWebsite() {
@@ -176,6 +184,7 @@ export default function KaptureVisualsWebsite() {
               </h1>
 
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+
               <motion.a
                 whileHover={{ y: -3, scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
@@ -184,11 +193,16 @@ export default function KaptureVisualsWebsite() {
               >
                 View the work <ArrowRight className="h-4 w-4" />
               </motion.a>
-  
+
               <motion.a
                 whileHover={{ y: -3, scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
                 href="#contact"
+                onClick={() =>
+                  trackEvent("cta_start_project_click", {
+                    location: "hero",
+                  })
+                }
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
               >
                 Start a project
@@ -200,14 +214,19 @@ export default function KaptureVisualsWebsite() {
                 href={content.instagram}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-              >
-                Instagram
-              </motion.a>
-            </div>
+                onClick={() =>
+                  trackEvent("instagram_click", {
+                  location: "hero",
+                })
+              }
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            >
+              Instagram
+            </motion.a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <motion.section
         id="work"
@@ -338,6 +357,95 @@ export default function KaptureVisualsWebsite() {
       </div>
 
     </section>
+    
+    
+      {/* Portfolio Section */}
+
+      <motion.section
+        id="portfolio"
+        className="border-b border-black/10 bg-white px-6 py-24"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <div className="mx-auto max-w-7xl">
+
+          {/* Heading */}
+
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-12"
+          >
+            <p className="text-sm uppercase tracking-[0.35em] text-black/40">
+              The Portfolio
+            </p>
+
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-black md:text-5xl">
+              The Kapture Collection.
+            </h2>
+
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-black/60">
+              A curated collection of automotive stories,
+              events and cinematic storytelling.
+            </p>
+          </motion.div>
+
+          {/* Embedded PDF Viewer */}
+
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="overflow-hidden rounded-[2rem] border border-black/10 bg-neutral-100 shadow-xl"
+          >
+            
+            <object
+              data="/portfolio/Kapture-Visuals-Portfolio.pdf"
+              type="application/pdf"
+              className="h-[70vh] w-full md:h-[85vh]"
+              aria-label="Kapture Visuals Portfolio"
+            >
+              <p className="p-8 text-center text-black">
+                Your browser cannot display the portfolio.
+                <a
+                  href="/portfolio/Kapture-Visuals-Portfolio.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 underline"
+                >
+                  Open the PDF here.
+                </a>
+              </p>
+            </object>
+          </motion.div>
+
+          {/* Portfolio Actions */}
+
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mt-8 flex flex-wrap gap-4"
+          >
+            <a
+              href="/portfolio/Kapture-Visuals-Portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-black/80"
+            >
+              Open Full Portfolio ↗
+            </a>
+
+            <a
+              href="/portfolio/Kapture-Visuals-Portfolio.pdf"
+              download
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-black/15 px-6 py-3 text-sm font-semibold text-black transition hover:bg-black/5"
+            >
+              Download Portfolio ↓
+            </a>
+          </motion.div>
+
+        </div>
+      </motion.section>
 
       <motion.section
         id="services"
