@@ -2,17 +2,11 @@
   "title": "Hasselt Concours d'Elegance 2026",
   "slug": "hasselt-concours-elegance-2026",
   "event": "hasselt-concours-elegance",
-  "eventStartDate": "",
-  "eventEndDate": "",
+  "eventStartDate": "2026-06-05",
+  "eventEndDate": "2026-06-07",
   "city": "Hasselt",
   "country": "Belgium",
-  "coverImage": "/images/journal/hasselt-concours-elegance-2026/cover.jpg",
-  "excerpt": "",
-  "contributors": [],
   "status": "draft",
-  "publishedAt": "",
-  "featured": false,
-  "sections": [],
-  "gallery": [],
-  "filmUrl": ""
+  "publishedAt": "2026-09-24",
+  "featured": false
 }
