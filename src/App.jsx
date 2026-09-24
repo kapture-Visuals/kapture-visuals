@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { ArrowRight, Camera, Film, Mail, Sparkles } from "lucide-react";
 import PortfolioViewer from "./PortfolioViewer";
 import WorkGallery from "./WorkGallery";
+import JournalSelection from "./assets/journal/JournalSelection";
+import JournalArchive from "./assets/journal/JournalArchive";
+import JournalArticle from "./assets/journal/JournalArticle";
 
 
 const content = {
@@ -112,6 +115,8 @@ const logos = [
 
 export default function KaptureVisualsWebsite() {
   const [activeGallery, setActiveGallery] = useState(null);
+  const [activeJournal, setActiveJournal] = useState(null);
+  const [activeArticle, setActiveArticle] = useState(null);
 
   return (
     <main className="min-h-screen bg-white text-black">
@@ -155,6 +160,9 @@ export default function KaptureVisualsWebsite() {
           <div className="hidden items-center gap-8 text-sm font-semibold text-white md:flex">
             <a href="#work" className="transition hover:text-white/70">
               Work
+            </a>
+            <a href="#journal" className="transition hover:text-white/70">
+              Journal
             </a>
             <a href="#portfolio" className="transition hover:text-white/70">
               Portfolio
@@ -306,6 +314,19 @@ export default function KaptureVisualsWebsite() {
         
         
       </motion.section>
+
+      {/* KAPTURE JOURNAL */}
+
+      <JournalSelection
+        onOpenArticle={(slug) => {
+          setActiveArticle(slug);
+          setActiveJournal("article");
+        }}
+        onOpenJournal={() => {
+          setActiveArticle(null);
+          setActiveJournal("archive");
+        }}
+      />
 
       {/* Portfolio Section */}
 
