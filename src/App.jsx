@@ -1,28 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Camera, Film, Mail, Sparkles } from "lucide-react";
+import PortfolioViewer from "./PortfolioViewer";
+import WorkGallery from "./WorkGallery";
+
 
 const content = {
   siteName: "KAPTURE VISUALS",
   logo: "/images/logo-white.jpg",
   heroVideo: "/videos/hero.mp4",
+
   work: [
     {
+      id: "automotive",
       title: "Automotive Stories",
       type: "Engineering, detail & aesthetics",
       image: "/images/automotive.jpg",
     },
     {
+      id: "events",
       title: "Events & Culture",
       type: "Crowds, cities & atmosphere",
       image: "/images/events.jpg",
     },
     {
+      id: "cinematic",
       title: "Cinematic Storytelling",
       type: "Emotion, immersion & narrative",
       image: "/images/cinematic.jpg",
     },
   ],
+
   services: [
     {
       icon: "photo",
@@ -40,14 +48,17 @@ const content = {
       text: "Premium content designed to strengthen identity and brand presence.",
     },
   ],
+
   aboutImage: "/images/about.jpg",
+
   aboutParagraphs: [
     "Kapture Visuals was born from the strong belief that automotive culture has always been more than cars objects. Behind every machine lies something deeply human: the pursuit of improvement, precision, ambition and self-expression.",
     "Cars and bikes hence become experiences, memories and gateways to new places and perspectives.",
     "Through cinematic and immersive content, Kapture Visuals explores the atmosphere surrounding automotive culture across Europe, documenting not only the machines themselves, but the emotion, energy and moments that exist around them.",
   ],
+
   email: "kapture.visuals.production@gmail.com",
-  instagram: "https://instagram.com/kapture.visuals.eu",
+  instagram: "https://www.instagram.com/kapturevisuals.eu/",
 };
 
 function ServiceIcon({ type }) {
@@ -69,19 +80,19 @@ const trackEvent = (eventName, parameters = {}) => {
 
 const stats = [
   {
-    value: "12+",
+    value: "15+",
     label: "Projects Captured",
   },
   {
-    value: "5+",
+    value: "3+",
     label: "Countries Explored",
   },
   {
-    value: "50+",
+    value: "60+",
     label: "Visuals Stories Told",
   },
   {
-    value: "100+",
+    value: "250+",
     label: "Hours Behind the Camera",
   },
 ];
@@ -100,6 +111,8 @@ const logos = [
 ];
 
 export default function KaptureVisualsWebsite() {
+  const [activeGallery, setActiveGallery] = useState(null);
+
   return (
     <main className="min-h-screen bg-white text-black">
       <style>{`
@@ -138,12 +151,13 @@ export default function KaptureVisualsWebsite() {
             />
           </a>
 
+
           <div className="hidden items-center gap-8 text-sm font-semibold text-white md:flex">
             <a href="#work" className="transition hover:text-white/70">
               Work
             </a>
-            <a href="#featured" className="transition hover:text-white/70">
-              Featured
+            <a href="#portfolio" className="transition hover:text-white/70">
+              Portfolio
             </a>
             <a href="#services" className="transition hover:text-white/70">
               Services
@@ -230,7 +244,7 @@ export default function KaptureVisualsWebsite() {
 
       <motion.section
         id="work"
-        className="mx-auto max-w-7xl px-6 py-24"
+        className="mx-auto max-w-7xl px-6 py-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.25 }}
@@ -251,28 +265,159 @@ export default function KaptureVisualsWebsite() {
           </div>
         </motion.div>
 
+
         <div className="grid gap-6 md:grid-cols-3">
           {content.work.map((item, index) => (
-            <motion.article
-              key={item.title}
+            <motion.button
+              key={item.id}
+              type="button"
               variants={fadeUp}
-              transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.08 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeOut",
+                delay: index * 0.08,
+              }}
               whileHover={{ y: -8 }}
-              className="group relative aspect-[16/9] overflow-hidden rounded-[2rem] border border-white/10 bg-white/5"
+              whileTap={{ scale: 0.98 }}
+              onClick={() => setActiveGallery(item.id)}
+              aria-label={`Open ${item.title} gallery`}
+              className="group relative aspect-[16/9] cursor-pointer overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 text-left"
             >
               <img
                 src={item.image}
                 alt={item.title}
                 className="absolute inset-0 h-full w-full object-cover opacity-99 transition duration-700 group-hover:scale-110 group-hover:opacity-100"
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+
               <div className="absolute bottom-0 left-0 z-20 p-6">
-                <p className="text-sm text-white/70">{item.type}</p>
-                <h3 className="mt-2 text-2xl font-semibold text-white">{item.title}</h3>
+                <p className="text-sm text-white/70">
+                  {item.type}
+                </p>
+
+                <h3 className="mt-2 text-2xl font-semibold text-white">
+                  {item.title}
+                </h3>
               </div>
-            </motion.article>
+            </motion.button>
           ))}
         </div>
+        
+        
+      </motion.section>
+
+      {/* Portfolio Section */}
+
+      <motion.section
+        id="portfolio"
+        className="border-b border-black/10 bg-white px-6 pt-12 pb-20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <div className="mx-auto max-w-7xl">
+
+          {/* Heading */}
+
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-12"
+          >
+            <p className="text-sm uppercase tracking-[0.35em] text-black/40">
+              The Portfolio
+            </p>
+
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-black md:text-5xl">
+              The Kapture Collection.
+            </h2>
+
+          </motion.div>
+
+          {/* Embedded PDF Viewer */}
+
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="overflow-hidden rounded-[2rem] border border-black/10 bg-neutral-100 shadow-xl"
+          >
+            
+            <PortfolioViewer />
+          </motion.div>
+
+          {/* Portfolio Actions */}
+
+          <motion.div
+            variants={fadeUp}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mt-8 flex flex-wrap gap-4"
+          >
+            <a
+              href="/portfolio/Kapture-Visuals-Portfolio.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-black/80"
+            >
+              Open Full Portfolio ↗
+            </a>
+
+            <a
+              href="/portfolio/Kapture-Visuals-Portfolio.pdf"
+              download
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-black/15 px-6 py-3 text-sm font-semibold text-black transition hover:bg-black/5"
+            >
+              Download Portfolio ↓
+            </a>
+          </motion.div>
+
+        </div>
+      </motion.section>
+
+      <motion.section
+        id="services"
+        className="border-y border-black/10 bg-neutral-100 px-6 py-16"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <div className="mx-auto max-w-7xl">
+          <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.35em] text-black/40">
+            Creative Direction
+          </motion.p>
+          <motion.h2 variants={fadeUp} className="mt-3 max-w-3xl text-4xl font-semibold text-black md:text-5xl">
+            Content for brands, creators and automotive culture.
+          </motion.h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {content.services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                variants={fadeUp}
+                transition={{ duration: 0.8, delay: index * 0.08, ease: "easeOut" }}
+                whileHover={{ y: -8, scale: 1.01 }}
+                className="rounded-[2rem] border border-black/10 bg-white p-7 shadow-xl"
+              >
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
+                  <ServiceIcon type={service.icon} />
+                </div>
+                <h3 className="text-2xl font-semibold">{service.title}</h3>
+                <p className="mt-4 leading-7 text-black/60">{service.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+            {/* Journey So Far */}
+
+      <motion.section
+        id="journey"
+        className="mx-auto max-w-7xl px-6 pb-12"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ staggerChildren: 0.15 }}
+      >
 
       <motion.div
         variants={fadeUp}
@@ -312,7 +457,136 @@ export default function KaptureVisualsWebsite() {
 
       </motion.section>
 
-      {/* Featured At */}
+      <motion.section
+        id="about"
+        className="mx-auto grid max-w-7xl items-start gap-16 px-6 pt-12 pb-8 md:grid-cols-[0.85fr_1.15fr]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div variants={fadeUp} className="overflow-hidden rounded-[2rem] border border-white/10">
+          <img
+            src={content.aboutImage}
+            alt="Cinematic road"
+            className="h-[565px] w-full object-cover object-center opacity-99 transition duration-700 hover:scale-105"
+          />
+        </motion.div>
+        <motion.div variants={fadeUp} transition={{ duration: 0.9, ease: "easeOut", delay: 0.12 }}>
+          <p className="text-sm uppercase tracking-[0.35em] text-black/40">
+            The idea behind Kapture Visuals
+          </p>
+          <h2 className="mt-3 text-4xl font-semibold text-black md:text-5xl">
+            A cinematic vision of motion and culture.
+          </h2>
+          {content.aboutParagraphs.map((paragraph, index) => (
+            <p
+              key={index}
+              className={index === 0 ? "mt-6 text-lg leading-8 text-black/65" : "mt-5 text-lg leading-8 text-black/65"}
+            >
+              {paragraph}
+            </p>
+          ))}
+          <div className="mt-10 border-l-2 border-black/15 pl-6">
+            <p className="text-2xl italic font-medium text-black/80 leading-relaxed">
+              "While nature created the world around us,
+              humans engineered the machines that keep it moving."
+            </p>
+          </div>
+        </motion.div>
+      </motion.section>
+
+
+{/* THE PEOPLE BEHIND KAPTURE */}
+
+<section className="bg-white px-6 pt-8 pb-16">
+  <div className="mx-auto max-w-7xl">
+
+    <p className="text-sm uppercase tracking-[0.35em] text-black/40">
+      THE PEOPLE BEHIND THE IDEA
+    </p>
+
+    <h2 className="mt-3 text-4xl font-semibold tracking-tight text-black md:text-5xl">
+      Different Perspectives. One Vision.
+    </h2>
+
+    <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-8">
+
+      {[
+        {
+          name: "Noah",
+          role: "Founder",
+          brand: "Kapture Visuals",
+          image: "/images/team/noah.jpg",
+          instagram: "https://www.instagram.com/kapturevisuals.eu"
+        },
+        {
+          name: "Alessio",
+          role: "Contributor",
+          brand: "AR Visuals",
+          image: "/images/team/alessio.jpg",
+          instagram: "https://www.instagram.com/alssr.visuals"
+        },
+        {
+          name: "Niko",
+          role: "Contributor",
+          brand: "NK Visuals",
+          image: "/images/team/niko.jpg",
+          instagram: "https://www.instagram.com/nk.visuals._"
+        },
+        {
+          name: "Xavier",
+          role: "Contributor",
+          brand: "Apex Prods",
+          image: "/images/team/xavier.jpg",
+          instagram: "https://www.instagram.com/apex_prods"
+        }
+      ].map((person) => (
+
+        <a
+          key={person.name}
+          href={person.instagram || undefined}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block"
+        >
+
+          <div className="aspect-[3/4] overflow-hidden rounded-xl bg-gray-100">
+
+            <img
+              src={person.image}
+              alt={person.name}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+
+          </div>
+
+          <div className="mt-4">
+
+            <h3 className="text-lg font-semibold">
+              {person.name}
+            </h3>
+
+            <p className="mt-1 text-sm text-black/60">
+              {person.role} · {person.brand}
+            </p>
+
+            <p className="mt-2 text-xs text-black/40 transition-colors group-hover:text-black">
+              Instagram ↗
+            </p>
+
+          </div>
+
+        </a>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
+{/* Featured At */}
 
       <section
         id="featured"
@@ -357,171 +631,10 @@ export default function KaptureVisualsWebsite() {
       </div>
 
     </section>
-    
-    
-      {/* Portfolio Section */}
-
-      <motion.section
-        id="portfolio"
-        className="border-b border-black/10 bg-white px-6 py-24"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-      >
-        <div className="mx-auto max-w-7xl">
-
-          {/* Heading */}
-
-          <motion.div
-            variants={fadeUp}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mb-12"
-          >
-            <p className="text-sm uppercase tracking-[0.35em] text-black/40">
-              The Portfolio
-            </p>
-
-            <h2 className="mt-3 text-4xl font-semibold tracking-tight text-black md:text-5xl">
-              The Kapture Collection.
-            </h2>
-
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-black/60">
-              A curated collection of automotive stories,
-              events and cinematic storytelling.
-            </p>
-          </motion.div>
-
-          {/* Embedded PDF Viewer */}
-
-          <motion.div
-            variants={fadeUp}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="overflow-hidden rounded-[2rem] border border-black/10 bg-neutral-100 shadow-xl"
-          >
-            
-            <object
-              data="/portfolio/Kapture-Visuals-Portfolio.pdf"
-              type="application/pdf"
-              className="h-[70vh] w-full md:h-[85vh]"
-              aria-label="Kapture Visuals Portfolio"
-            >
-              <p className="p-8 text-center text-black">
-                Your browser cannot display the portfolio.
-                <a
-                  href="/portfolio/Kapture-Visuals-Portfolio.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-2 underline"
-                >
-                  Open the PDF here.
-                </a>
-              </p>
-            </object>
-          </motion.div>
-
-          {/* Portfolio Actions */}
-
-          <motion.div
-            variants={fadeUp}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mt-8 flex flex-wrap gap-4"
-          >
-            <a
-              href="/portfolio/Kapture-Visuals-Portfolio.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-black/80"
-            >
-              Open Full Portfolio ↗
-            </a>
-
-            <a
-              href="/portfolio/Kapture-Visuals-Portfolio.pdf"
-              download
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-black/15 px-6 py-3 text-sm font-semibold text-black transition hover:bg-black/5"
-            >
-              Download Portfolio ↓
-            </a>
-          </motion.div>
-
-        </div>
-      </motion.section>
-
-      <motion.section
-        id="services"
-        className="border-y border-black/10 bg-neutral-100 px-6 py-24"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.25 }}
-      >
-        <div className="mx-auto max-w-7xl">
-          <motion.p variants={fadeUp} className="text-sm uppercase tracking-[0.35em] text-black/40">
-            Creative Direction
-          </motion.p>
-          <motion.h2 variants={fadeUp} className="mt-3 max-w-3xl text-4xl font-semibold text-black md:text-5xl">
-            Content for brands, creators and automotive culture.
-          </motion.h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {content.services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                variants={fadeUp}
-                transition={{ duration: 0.8, delay: index * 0.08, ease: "easeOut" }}
-                whileHover={{ y: -8, scale: 1.01 }}
-                className="rounded-[2rem] border border-black/10 bg-white p-7 shadow-xl"
-              >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-black text-white">
-                  <ServiceIcon type={service.icon} />
-                </div>
-                <h3 className="text-2xl font-semibold">{service.title}</h3>
-                <p className="mt-4 leading-7 text-black/60">{service.text}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
-
-      <motion.section
-        id="about"
-        className="mx-auto grid max-w-7xl items-start gap-16 px-6 py-24 md:grid-cols-[0.85fr_1.15fr]"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <motion.div variants={fadeUp} className="overflow-hidden rounded-[2rem] border border-white/10">
-          <img
-            src={content.aboutImage}
-            alt="Cinematic road"
-            className="h-[565px] w-full object-cover object-center opacity-99 transition duration-700 hover:scale-105"
-          />
-        </motion.div>
-        <motion.div variants={fadeUp} transition={{ duration: 0.9, ease: "easeOut", delay: 0.12 }}>
-          <p className="text-sm uppercase tracking-[0.35em] text-black/40">
-            The idea behind Kapture Visuals
-          </p>
-          <h2 className="mt-3 text-4xl font-semibold text-black md:text-5xl">
-            A cinematic vision of motion and culture.
-          </h2>
-          {content.aboutParagraphs.map((paragraph, index) => (
-            <p
-              key={index}
-              className={index === 0 ? "mt-6 text-lg leading-8 text-black/65" : "mt-5 text-lg leading-8 text-black/65"}
-            >
-              {paragraph}
-            </p>
-          ))}
-          <div className="mt-10 border-l-2 border-black/15 pl-6">
-            <p className="text-2xl italic font-medium text-black/80 leading-relaxed">
-              "While nature created the world around us,
-              humans engineered the machines that keep it moving."
-            </p>
-          </div>
-        </motion.div>
-      </motion.section>
 
       <motion.section
         id="contact"
-        className="px-6 pb-24"
+        className="px-6 pt-20 pb-20"
         initial={{ opacity: 0, y: 36 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.35 }}
@@ -719,6 +832,14 @@ export default function KaptureVisualsWebsite() {
           </p>
         </div>
       </footer>
+
+      {activeGallery && (
+        <WorkGallery
+          category={activeGallery}
+          onClose={() => setActiveGallery(null)}
+        />
+      )}
+
     </main>
   );
 }
