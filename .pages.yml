@@ -1,0 +1,179 @@
+
+media:
+  input: public/images/journal
+  output: /images/journal
+
+content:
+  - name: journal
+    label: Journal Articles
+    type: collection
+    path: content/journal
+    format: json
+    filename: "{fields.slug}.json"
+    view:
+      fields:
+        - title
+        - eventStartDate
+        - status
+        - featured
+      primary: title
+      sort:
+        - eventStartDate
+        - title
+    fields:
+      - name: title
+        label: Article Title
+        type: string
+        required: true
+
+      - name: slug
+        label: Article Slug
+        type: string
+        required: true
+
+      - name: event
+        label: Event ID
+        type: string
+        required: true
+
+      - name: eventStartDate
+        label: Event Start Date
+        type: date
+
+      - name: eventEndDate
+        label: Event End Date
+        type: date
+
+      - name: city
+        label: City
+        type: string
+
+      - name: country
+        label: Country
+        type: string
+
+      - name: coverImage
+        label: Cover Image
+        type: image
+
+      - name: excerpt
+        label: Article Excerpt
+        type: text
+
+      - name: contributors
+        label: Contributors
+        type: string
+        list: true
+
+      - name: status
+        label: Publication Status
+        type: select
+        options:
+          values:
+            - draft
+            - review
+            - published
+
+      - name: publishedAt
+        label: Publication Date
+        type: date
+
+      - name: featured
+        label: Featured Article
+        type: boolean
+
+      - name: sections
+        label: Article Sections
+        type: object
+        list: true
+        fields:
+          - name: heading
+            label: Section Heading
+            type: string
+
+          - name: text
+            label: Section Text
+            type: rich-text
+
+      - name: gallery
+        label: Photo Gallery
+        type: image
+        list: true
+
+      - name: filmUrl
+        label: Film URL
+        type: string
+
+  - name: events
+    label: Events
+    type: collection
+    path: content/events
+    format: json
+    filename: "{fields.slug}.json"
+    fields:
+      - name: name
+        label: Event Name
+        type: string
+        required: true
+
+      - name: slug
+        label: Event ID
+        type: string
+        required: true
+
+      - name: city
+        label: City
+        type: string
+
+      - name: country
+        label: Country
+        type: string
+
+      - name: category
+        label: Event Category
+        type: string
+
+      - name: description
+        label: Description
+        type: text
+
+      - name: website
+        label: Official Website
+        type: string
+
+  - name: contributors
+    label: Contributors
+    type: collection
+    path: content/contributors
+    format: json
+    filename: "{fields.slug}.json"
+    fields:
+      - name: name
+        label: Contributor Name
+        type: string
+        required: true
+
+      - name: slug
+        label: Contributor ID
+        type: string
+        required: true
+
+      - name: brand
+        label: Brand
+        type: string
+
+      - name: role
+        label: Role
+        type: string
+
+      - name: instagram
+        label: Instagram URL
+        type: string
+
+      - name: image
+        label: Profile Image
+        type: image
+
+      - name: bio
+        label: Biography
+        type: text
