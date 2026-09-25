@@ -6,6 +6,7 @@
   "eventEndDate": "2026-06-07",
   "city": "Hasselt",
   "country": "Belgium",
+  "coverImage": "/images/journal/cover.jpg.png",
   "excerpt": "Where performance, luxury and a relaxed Sunday atmosphere met in the heart of Hasselt.",
   "contributors": [
     "Noah",
@@ -35,5 +36,31 @@
       "heading": "Luxury Without the Stiffness",
       "text": "That may ultimately be what we remember most about Hasselt Élégance.\n\nIt was undeniably a luxury event. The cars, watches, champagne, hospitality and presentation made that clear.\n\nBut it never felt excessively formal.\n\nThere was an elegance to the surroundings without the sense that everything had to be observed from a distance. People talked around the cars. Owners moved in and out. Engines started. Drinks were shared. Music played. Conversations happened naturally.\n\nAnd the relatively compact scale helped.\n\nHasselt Élégance was not enormous, but it didn't need to be. There was enough to discover without feeling that you had to race through the programme, enough people to create energy without turning the venue into an overcrowded show floor, and enough variety to move between performance cars, lifestyle, food and conversation throughout the afternoon.\n\nThe result sat somewhere between an automotive gathering and a luxury social event.\n\nSerious about the cars, but relaxed about everything surrounding them.\n\nFor a Sunday in Hasselt, that balance worked remarkably well."
     }
+  ],
+  "gallery": [
+    "/images/journal/bugatti-chiron-01.jpg",
+    "/images/journal/dogs-01.jpg",
+    "/images/journal/dogs-02.jpg",
+    "/images/journal/gt3rs-manthey-01.jpg",
+    "/images/journal/interior-01.jpg",
+    "/images/journal/interior-02.jpg",
+    "/images/journal/interior-03.jpg",
+    "/images/journal/interior-04.jpg",
+    "/images/journal/interior-05.jpg",
+    "/images/journal/interior-06.jpg",
+    "/images/journal/interior-07.jpg",
+    "/images/journal/interior-08.jpg",
+    "/images/journal/mercedes-maybach-01.jpg",
+    "/images/journal/parking entrance-02.jpg",
+    "/images/journal/parking-01.jpg",
+    "/images/journal/parking-02.jpg",
+    "/images/journal/parking-03.jpg",
+    "/images/journal/parking-04.jpg",
+    "/images/journal/parking-entrance-01.jpg",
+    "/images/journal/parking-entrance-03.jpg",
+    "/images/journal/parking-entrance-04.jpg",
+    "/images/journal/pavillon-01.jpg",
+    "/images/journal/pavillon-02.jpg",
+    "/images/journal/watch-01.jpg"
   ]
 }
