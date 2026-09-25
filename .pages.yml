@@ -61,8 +61,13 @@ content:
 
       - name: contributors
         label: Contributors
-        type: string
-        list: true
+        type: reference
+        options:
+          collection: contributors
+          multiple : true
+          search : name
+          value : "{fields.slug}"
+          label : "{fields.name}"
 
       - name: status
         label: Publication Status

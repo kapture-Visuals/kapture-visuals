@@ -11,7 +11,7 @@
 
 // Import all Journal articles automatically
 const journalFiles = import.meta.glob(
-  "../../content/journal/*.json",
+  "../../../content/journal/*.json",
   {
     eager: true,
     import: "default",
@@ -20,7 +20,7 @@ const journalFiles = import.meta.glob(
 
 // Import all contributor profiles automatically
 const contributorFiles = import.meta.glob(
-  "../../content/contributors/*.json",
+  "../../../content/contributors/*.json",
   {
     eager: true,
     import: "default",
@@ -32,17 +32,27 @@ export const contributors = Object.values(
   contributorFiles
 );
 
-// Find a contributor using their ID
+
+// Find a contributor using their ID, slug or name
+
 export function getContributor(id) {
-  return contributors.find(
-    (contributor) =>
-      contributor.slug === id ||
-      contributor.id === id
-  );
+  if (!id) return undefined;
+
+  const searchId = String(id).trim().toLowerCase();
+
+  return contributors.find((contributor) => {
+    return (
+      contributor.slug?.toLowerCase() === searchId ||
+      contributor.id?.toLowerCase() === searchId ||
+      contributor.name?.toLowerCase() === searchId
+    );
+  });
 }
 
 // Load all Journal articles
 const allArticles = Object.values(journalFiles);
+
+console.log("ALL JOURNAL ARTICLES:", allArticles);
 
 // Keep only published articles with valid event dates
 export const journalArticles = allArticles
@@ -73,6 +83,8 @@ export const journalArticles = allArticles
 // Get the three most recent Journal articles
 export const latestJournalArticles =
   journalArticles.slice(0, 3);
+
+console.log("PUBLISHED ARTICLES:", journalArticles);
 
 // Find a specific article using its slug
 export function getJournalArticle(slug) {
