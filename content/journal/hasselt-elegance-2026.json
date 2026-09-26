@@ -6,7 +6,7 @@
   "eventEndDate": "2026-06-07",
   "city": "Hasselt",
   "country": "Belgium",
-  "coverImage": "/images/journal/cover.jpg.png",
+  "coverImage": "/images/journal/hasselt-elegance-2026/cover.jpg",
   "excerpt": "Where performance, luxury and a relaxed Sunday atmosphere met in the heart of Hasselt.",
   "contributors": [
     "noah",
@@ -18,49 +18,130 @@
   "sections": [
     {
       "heading": "Elegance in the Heart of Hasselt",
-      "text": "For three days in June, Hasselt Élégance turned the Kolonel Dusartplein into a meeting point for cars, luxury and lifestyle. Running from 5 to 7 June, the Élégance Pavilion opened throughout the weekend alongside a series of rallies, while Sunday was dedicated to the GT & Electric Rally.\n\nWe arrived on Sunday to something that immediately felt different from a conventional motor show. There were enough cars and people to keep the square alive, but never so many that the experience became overwhelming. The weather played its part too. With the sun breaking through over Hasselt, the event felt less like an exhibition to rush through and more like somewhere to spend an afternoon.\n\nFerrari, Lamborghini, Aston Martin, Mercedes, Porsche and Bugatti were all part of the landscape, but the appeal of Hasselt Élégance was never simply the number of prestigious badges gathered in one place.\n\nIt was the setting around them."
+      "text": "For three days in June, Hasselt Élégance turned the Kolonel Dusartplein into a meeting point for cars, luxury and lifestyle. Running from 5 to 7 June, the Élégance Pavilion opened throughout the weekend alongside a series of rallies, while Sunday was dedicated to the GT & Electric Rally.\n\nWe arrived on Sunday to something that immediately felt different from a conventional motor show. There were enough cars and people to keep the square alive, but never so many that the experience became overwhelming. The weather played its part too. With the sun breaking through over Hasselt, the event felt less like an exhibition to rush through and more like somewhere to spend an afternoon.\n\nFerrari, Lamborghini, Aston Martin, Mercedes, Porsche and Bugatti were all part of the landscape, but the appeal of Hasselt Élégance was never simply the number of prestigious badges gathered in one place.\n\nIt was the setting around them.",
+      "blocks": [
+        {
+          "type": "split",
+          "position": "after-2",
+          "imagePosition": "left",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/pavillon-01.jpg"
+          ]
+        },
+        {
+          "type": "image",
+          "position": "end",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/pavillon-02.jpg"
+          ]
+        }
+      ]
     },
     {
       "heading": "When the Cars Came to Life",
-      "text": "Some of the strongest moments happened at the edge of the event.\n\nCars would gather in the queue, engines would start, people would move towards the barriers and, for a few seconds, a machine that had spent most of the afternoon sitting quietly on display suddenly became the centre of attention.\n\nThen it would disappear back towards the parking area and another would take its place.\n\nThat constant movement gave the day a rhythm. It meant that the cars never felt completely static. A Porsche could be parked among the crowd one moment and rolling out onto the streets of Hasselt the next.\n\nA Lamborghini passing through the exit, a Ferrari catching the late-afternoon light or a Porsche slowly making its way between spectators created the kind of moments that are difficult to reproduce in a traditional exhibition hall.\n\nFor us, this was where Hasselt Élégance felt most alive."
+      "text": "Some of the strongest moments happened at the edge of the event.\n\nCars would gather in the queue, engines would start, people would move towards the barriers and, for a few seconds, a machine that had spent most of the afternoon sitting quietly on display suddenly became the centre of attention.\n\nThen it would disappear back towards the parking area and another would take its place.\n\nThat constant movement gave the day a rhythm. It meant that the cars never felt completely static. A Porsche could be parked among the crowd one moment and rolling out onto the streets of Hasselt the next.\n\nA Lamborghini passing through the exit, a Ferrari catching the late-afternoon light or a Porsche slowly making its way between spectators created the kind of moments that are difficult to reproduce in a traditional exhibition hall.\n\nFor us, this was where Hasselt Élégance felt most alive.",
+      "blocks": [
+        {
+          "type": "grid-four",
+          "position": "after-2",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/parking-01.jpg",
+            "/images/journal/hasselt-elegance-2026/parking-02.jpg",
+            "/images/journal/hasselt-elegance-2026/parking-03.jpg",
+            "/images/journal/hasselt-elegance-2026/parking-04.jpg"
+          ]
+        },
+        {
+          "type": "editorial-three",
+          "position": "after-5",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/parking-entrance-01.jpg",
+            "/images/journal/hasselt-elegance-2026/parking-entrance-02.jpg",
+            "/images/journal/hasselt-elegance-2026/parking-entrance-03.jpg"
+          ]
+        },
+        {
+          "type": "image",
+          "position": "after-5",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/parking-entrance-04.jpg"
+          ]
+        }
+      ]
     },
     {
       "heading": "The Ones We Remember",
-      "text": "Among everything on display, two cars defined the afternoon for us.\n\nThe first was the Bugatti Chiron.\n\nEven surrounded by Ferraris, Lamborghinis and Porsches, the Chiron immediately changed the atmosphere around it. Its proportions, unmistakable horseshoe grille and sheer presence made it one of those cars that naturally generated a crowd whenever it moved.\n\nIt was not hidden away behind a distant display. Seeing it sitting among other cars in the centre of Hasselt, and watching the environment react to it, made it one of the defining sights of the day.\n\nThen there was the Porsche 911 GT3 RS with a Manthey kit.\n\nWhere the Bugatti carried its presence almost effortlessly, the Porsche communicated something completely different. Aero elements, the enormous rear wing and the Manthey detailing gave it the appearance of something that had arrived from a pit lane rather than a luxury event.\n\nSeeing the two within the same afternoon captured something Hasselt Élégance did particularly well: bringing very different interpretations of the automobile into the same environment."
+      "text": "Among everything on display, two cars defined the afternoon for us.\n\nThe first was the Bugatti Chiron.\n\nEven surrounded by Ferraris, Lamborghinis and Porsches, the Chiron immediately changed the atmosphere around it. Its proportions, unmistakable horseshoe grille and sheer presence made it one of those cars that naturally generated a crowd whenever it moved.\n\nIt was not hidden away behind a distant display. Seeing it sitting among other cars in the centre of Hasselt, and watching the environment react to it, made it one of the defining sights of the day.\n\nThen there was the Porsche 911 GT3 RS with a Manthey kit.\n\nWhere the Bugatti carried its presence almost effortlessly, the Porsche communicated something completely different. Aero elements, the enormous rear wing and the Manthey detailing gave it the appearance of something that had arrived from a pit lane rather than a luxury event.\n\nSeeing the two within the same afternoon captured something Hasselt Élégance did particularly well: bringing very different interpretations of the automobile into the same environment.",
+      "blocks": [
+        {
+          "type": "split",
+          "position": "after-3",
+          "imagePosition": "left",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/bugatti-chiron-01.jpg"
+          ]
+        },
+        {
+          "type": "split",
+          "position": "after-6",
+          "imagePosition": "right",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/gt3rs-manthey-01.jpg"
+          ]
+        }
+      ]
     },
     {
       "heading": "Beyond the Cars",
-      "text": "Step inside the Pavilion and the tone changed.\n\nEngine noise gave way to music and conversation. Cars remained part of the setting, but they shared the space with watches, champagne, food, design and people simply enjoying the afternoon.\n\nThat wasn't accidental. Hasselt Élégance presented the Pavilion as the lifestyle centre of the event, bringing together more than twenty high-end brands alongside exceptional cars, gastronomy, champagne and live music.\n\nA Mercedes Maybach SL 680 Monogram Series could sit metres away from a table of luxury watches. A bottle of champagne became part of the visual environment just as easily as a carbon-fibre wing. Food moved through the room while music played nearby, and conversations happened without the constant pressure of having to move on to the next attraction.\n\nEven some of the smaller scenes became part of the story: glasses waiting on a table, the Ferrari emblem against a red wall, a waiter moving through the Pavilion, or even a dog being carried through the crowd.\n\nNone of them were the headline attraction.\n\nTogether, they were the atmosphere."
+      "text": "Step inside the Pavilion and the tone changed.\n\nEngine noise gave way to music and conversation. Cars remained part of the setting, but they shared the space with watches, champagne, food, design and people simply enjoying the afternoon.\n\nThat wasn't accidental. Hasselt Élégance presented the Pavilion as the lifestyle centre of the event, bringing together more than twenty high-end brands alongside exceptional cars, gastronomy, champagne and live music.\n\nA Mercedes Maybach SL 680 Monogram Series could sit metres away from a table of luxury watches. A bottle of champagne became part of the visual environment just as easily as a carbon-fibre wing. Food moved through the room while music played nearby, and conversations happened without the constant pressure of having to move on to the next attraction.\n\nEven some of the smaller scenes became part of the story: glasses waiting on a table, the Ferrari emblem against a red wall, a waiter moving through the Pavilion, or even a dog being carried through the crowd.\n\nNone of them were the headline attraction.\n\nTogether, they were the atmosphere.",
+      "blocks": [
+        {
+          "type": "image",
+          "position": "after-1",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/interior-01.jpg"
+          ]
+        },
+        {
+          "type": "grid-four",
+          "position": "after-3",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/interior-02.jpg",
+            "/images/journal/hasselt-elegance-2026/interior-03.jpg",
+            "/images/journal/hasselt-elegance-2026/interior-04.jpg",
+            "/images/journal/hasselt-elegance-2026/interior-05.jpg"
+          ]
+        },
+        {
+          "type": "pair",
+          "position": "after-4",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/mercedes-maybach-01.jpg",
+            "/images/journal/hasselt-elegance-2026/watch-01.jpg"
+          ]
+        },
+        {
+          "type": "editorial-three",
+          "position": "after-4",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/interior-06.jpg",
+            "/images/journal/hasselt-elegance-2026/interior-07.jpg",
+            "/images/journal/hasselt-elegance-2026/interior-08.jpg"
+          ]
+        },
+        {
+          "type": "pair",
+          "position": "after-5",
+          "images": [
+            "/images/journal/hasselt-elegance-2026/dogs-01.jpg",
+            "/images/journal/hasselt-elegance-2026/dogs-02.jpg"
+          ]
+        }
+      ]
     },
     {
       "heading": "Luxury Without the Stiffness",
       "text": "That may ultimately be what we remember most about Hasselt Élégance.\n\nIt was undeniably a luxury event. The cars, watches, champagne, hospitality and presentation made that clear.\n\nBut it never felt excessively formal.\n\nThere was an elegance to the surroundings without the sense that everything had to be observed from a distance. People talked around the cars. Owners moved in and out. Engines started. Drinks were shared. Music played. Conversations happened naturally.\n\nAnd the relatively compact scale helped.\n\nHasselt Élégance was not enormous, but it didn't need to be. There was enough to discover without feeling that you had to race through the programme, enough people to create energy without turning the venue into an overcrowded show floor, and enough variety to move between performance cars, lifestyle, food and conversation throughout the afternoon.\n\nThe result sat somewhere between an automotive gathering and a luxury social event.\n\nSerious about the cars, but relaxed about everything surrounding them.\n\nFor a Sunday in Hasselt, that balance worked remarkably well."
     }
-  ],
-  "gallery": [
-    "/images/journal/bugatti-chiron-01.jpg",
-    "/images/journal/dogs-01.jpg",
-    "/images/journal/dogs-02.jpg",
-    "/images/journal/gt3rs-manthey-01.jpg",
-    "/images/journal/interior-01.jpg",
-    "/images/journal/interior-02.jpg",
-    "/images/journal/interior-03.jpg",
-    "/images/journal/interior-04.jpg",
-    "/images/journal/interior-05.jpg",
-    "/images/journal/interior-06.jpg",
-    "/images/journal/interior-07.jpg",
-    "/images/journal/interior-08.jpg",
-    "/images/journal/mercedes-maybach-01.jpg",
-    "/images/journal/parking entrance-02.jpg",
-    "/images/journal/parking-01.jpg",
-    "/images/journal/parking-02.jpg",
-    "/images/journal/parking-03.jpg",
-    "/images/journal/parking-04.jpg",
-    "/images/journal/parking-entrance-01.jpg",
-    "/images/journal/parking-entrance-03.jpg",
-    "/images/journal/parking-entrance-04.jpg",
-    "/images/journal/pavillon-01.jpg",
-    "/images/journal/pavillon-02.jpg",
-    "/images/journal/watch-01.jpg"
   ]
 }

@@ -1,9 +1,12 @@
-
-export default function JournalCard({ article }) {
+export default function JournalCard({ article, onOpen }) {
   if (!article) return null;
 
   return (
-    <article className="journal-card">
+    <article
+      className="journal-card"
+      onClick={() => onOpen?.(article)}
+      style={{ cursor: "pointer" }}
+    >
       <img
         src={article.coverImage}
         alt={article.title}

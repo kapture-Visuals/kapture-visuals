@@ -99,6 +99,54 @@ content:
             label: Section Text
             type: rich-text
 
+          - name: blocks
+            label: Editorial Blocks
+            type: object
+            list: true
+            fields:
+              - name: type
+                label: Block Type
+                type: select
+                options:
+                  values:
+                    - image
+                    - split
+                    - pair
+                    - grid-four
+                    - editorial-three
+
+              - name: position
+                label: Position
+                type: select
+                options:
+                  values:
+                    - after-1
+                    - after-2
+                    - after-3
+                    - after-4
+                    - after-5
+                    - after-6
+                    - after-7
+                    - after-8
+                    - end
+
+              - name: imagePosition
+                label: Image Position
+                type: select
+                options:
+                  values:
+                    - left
+                    - right
+
+              - name: images
+                label: Image Paths
+                type: string
+                list: true
+
+              - name: caption
+                label: Caption
+                type: string
+
       - name: gallery
         label: Photo Gallery
         type: image

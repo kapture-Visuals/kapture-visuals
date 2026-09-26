@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Camera, Film, Mail, Sparkles } from "lucide-react";
 import PortfolioViewer from "./PortfolioViewer";
@@ -6,6 +6,7 @@ import WorkGallery from "./WorkGallery";
 import JournalSelection from "./assets/journal/JournalSelection";
 import JournalArchive from "./assets/journal/JournalArchive";
 import JournalArticle from "./assets/journal/JournalArticle";
+import { getJournalArticle } from "./assets/journal/JournalData";
 
 
 const content = {
@@ -117,6 +118,45 @@ export default function KaptureVisualsWebsite() {
   const [activeGallery, setActiveGallery] = useState(null);
   const [activeJournal, setActiveJournal] = useState(null);
   const [activeArticle, setActiveArticle] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [contactVisible, setContactVisible] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > window.innerHeight - 120);
+  };
+
+  handleScroll();
+
+  window.addEventListener("scroll", handleScroll, {
+    passive: true,
+  });
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
+useEffect(() => {
+  const contactSection = document.getElementById("contact");
+
+  if (!contactSection) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setContactVisible(entry.isIntersecting);
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  observer.observe(contactSection);
+
+  return () => {
+    observer.disconnect();
+  };
+}, []);
 
   return (
     <main className="min-h-screen bg-white text-black">
@@ -145,38 +185,74 @@ export default function KaptureVisualsWebsite() {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed left-0 top-0 z-50 w-full border-b border-black/10 bg-white/10 backdrop-blur-xl"
+        className={`fixed left-0 top-0 z-50 w-full border-b backdrop-blur-xl transition-all duration-500 ${
+          scrolled
+            ? "border-black/10 bg-white/90"
+            : "border-white/10 bg-black/10"
+        }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+
           <a href="/" aria-label="Kapture Visuals home">
             <img
-              src={content.logo}
+              src={
+                scrolled
+                  ? "/images/logo-black.jpg"
+                  : "/images/logo-white.jpg"
+              }
               alt={content.siteName}
               className="h-24 w-auto"
             />
           </a>
 
-
-          <div className="hidden items-center gap-8 text-sm font-semibold text-white md:flex">
-            <a href="#work" className="transition hover:text-white/70">
+          <div
+            className={`hidden items-center gap-8 text-sm font-semibold transition-colors duration-500 md:flex ${
+              scrolled ? "text-black" : "text-white"
+            }`}
+          >
+            <a
+              href="#work"
+              className="transition hover:opacity-60"
+            >
               Work
             </a>
-            <a href="#journal" className="transition hover:text-white/70">
+
+            <a
+              href="#journal"
+              className="transition hover:opacity-60"
+            >
               Journal
             </a>
-            <a href="#portfolio" className="transition hover:text-white/70">
+
+            <a
+              href="#portfolio"
+              className="transition hover:opacity-60"
+            >
               Portfolio
             </a>
-            <a href="#services" className="transition hover:text-white/70">
+
+            <a
+              href="#services"
+              className="transition hover:opacity-60"
+            >
               Services
             </a>
-            <a href="#about" className="transition hover:text-white/70">
+
+            <a
+              href="#about"
+              className="transition hover:opacity-60"
+            >
               About
             </a>
-            <a href="#contact" className="transition hover:text-white/70">
+
+            <a
+              href="#contact"
+              className="transition hover:opacity-60"
+            >
               Contact
             </a>
           </div>
+
         </div>
       </motion.nav>
  
@@ -854,13 +930,63 @@ export default function KaptureVisualsWebsite() {
         </div>
       </footer>
 
-      {activeGallery && (
-        <WorkGallery
-          category={activeGallery}
-          onClose={() => setActiveGallery(null)}
+      {/* FLOATING PROJECT CTA */}
+
+      <motion.a
+        href="#contact"
+        initial={{ opacity: 0, y: 10 }}
+        animate={
+          scrolled && !contactVisible
+            ? { opacity: 1, y: 0 }
+            : { opacity: 0, y: 10 }
+        }
+        transition={{ duration: 0.3 }}
+        onClick={() =>
+          trackEvent("cta_start_project_click", {
+            location: "floating",
+          })
+        }
+        className={`fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-black/80 md:bottom-7 md:right-7 ${
+          scrolled && !contactVisible
+            ? "pointer-events-auto"
+            : "pointer-events-none"
+        }`}
+      >
+        Start a project
+        <ArrowRight className="h-4 w-4" />
+        </motion.a>
+
+         {activeGallery && (
+          <WorkGallery
+            category={activeGallery}
+            onClose={() => setActiveGallery(null)}
+          />
+        )}
+
+      {activeJournal === "archive" && (
+        <JournalArchive
+          onOpenArticle={(slug) => {
+            setActiveArticle(slug);
+            setActiveJournal("article");
+          }}
+          onClose={() => {
+            setActiveJournal(null);
+            setActiveArticle(null);
+          }}
+        />
+      )}
+
+      {activeJournal === "article" && activeArticle && (
+        <JournalArticle
+          article={getJournalArticle(activeArticle)}
+          onBack={() => {
+            setActiveArticle(null);
+            setActiveJournal("archive");
+          }}
         />
       )}
 
     </main>
+
   );
 }
