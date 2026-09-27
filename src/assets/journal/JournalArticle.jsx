@@ -4,6 +4,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ExternalLink,
+  Share2,
   X,
 } from "lucide-react";
 
@@ -687,6 +688,8 @@ export default function JournalArticle({
   const [activeImage, setActiveImage] =
     useState(null);
 
+  const [shareStatus, setShareStatus] = useState("");
+
   const contributors = article
     ? getArticleContributors(article)
     : [];
@@ -703,6 +706,51 @@ export default function JournalArticle({
         : [],
     [article]
   );
+
+  const handleShare = async () => {
+  if (!article) return;
+
+  const shareUrl = `${window.location.origin}/journal/${article.slug}`;
+
+  const shareData = {
+    title: article.title,
+    text: article.excerpt || article.title,
+    url: shareUrl,
+  };
+
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+      return;
+    }
+
+    await navigator.clipboard.writeText(shareUrl);
+
+    setShareStatus("Link copied ✓");
+
+    window.setTimeout(() => {
+      setShareStatus("");
+    }, 2000);
+  } catch (error) {
+    if (error?.name === "AbortError") return;
+
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+
+      setShareStatus("Link copied ✓");
+
+      window.setTimeout(() => {
+        setShareStatus("");
+      }, 2000);
+    } catch {
+      setShareStatus("Unable to copy");
+
+      window.setTimeout(() => {
+        setShareStatus("");
+      }, 2000);
+    }
+  }
+};
 
   if (!article) {
     return (
@@ -742,10 +790,11 @@ export default function JournalArticle({
 
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/20" />
 
-        {/* BACK */}
+        {/* ARTICLE NAVIGATION */}
 
         <div className="absolute inset-x-0 top-0 z-10">
-          <div className="mx-auto max-w-7xl px-6 py-7 md:px-10 md:py-9">
+          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-7 md:px-10 md:py-9">
+
             <button
               type="button"
               onClick={onBack}
@@ -754,6 +803,20 @@ export default function JournalArticle({
               <ArrowLeft size={16} />
               Journal
             </button>
+
+            <button
+              type="button"
+              onClick={handleShare}
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/10 px-4 py-2 text-sm text-white/75 backdrop-blur-md transition hover:border-white/35 hover:bg-white/10 hover:text-white"
+              aria-label="Share article"
+            >
+              <Share2 size={15} />
+
+              <span>
+                {shareStatus || "Share"}
+              </span>
+            </button>
+
           </div>
         </div>
 

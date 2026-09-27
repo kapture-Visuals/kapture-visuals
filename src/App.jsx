@@ -108,7 +108,7 @@ const logos = [
   "/logos/logo-Rupteur2.0 Trackday.png",
   "/logos/logo-Motor Valley Fest.png",
   "/logos/logo-bfd.png",
-  "logos/logo-bimmerfest.png",
+  "/logos/logo-bimmerfest.png",
   "/logos/logo-London Concours.png",
   "/logos/logo-24H Le Mans.png", 
   "/logos/logo-Supercar Madness.png",
@@ -122,6 +122,69 @@ export default function KaptureVisualsWebsite() {
   const [activeArticle, setActiveArticle] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [contactVisible, setContactVisible] = useState(false);
+  // ----------------------------------------
+// JOURNAL URL ROUTING
+// ----------------------------------------
+
+useEffect(() => {
+  const syncJournalFromUrl = () => {
+    const path = window.location.pathname;
+    const match = path.match(/^\/journal\/([^/]+)\/?$/);
+
+    if (match) {
+      const slug = decodeURIComponent(match[1]);
+      const article = getJournalArticle(slug);
+
+      if (article) {
+        setActiveArticle(slug);
+        setActiveJournal("article");
+        return;
+      }
+    }
+
+    if (path === "/journal" || path === "/journal/") {
+      setActiveArticle(null);
+      setActiveJournal("archive");
+      return;
+    }
+
+    setActiveArticle(null);
+    setActiveJournal(null);
+  };
+
+  syncJournalFromUrl();
+
+  window.addEventListener("popstate", syncJournalFromUrl);
+
+  return () => {
+    window.removeEventListener("popstate", syncJournalFromUrl);
+  };
+}, []);
+
+const openJournalArticle = (slug) => {
+  setActiveArticle(slug);
+  setActiveJournal("article");
+
+  window.history.pushState(
+    {},
+    "",
+    `/journal/${encodeURIComponent(slug)}`
+  );
+};
+
+const openJournalArchive = () => {
+  setActiveArticle(null);
+  setActiveJournal("archive");
+
+  window.history.pushState({}, "", "/journal");
+};
+
+const closeJournal = () => {
+  setActiveArticle(null);
+  setActiveJournal(null);
+
+  window.history.pushState({}, "", "/");
+};
 
 useEffect(() => {
   const handleScroll = () => {
@@ -396,14 +459,8 @@ useEffect(() => {
       {/* KAPTURE JOURNAL */}
 
       <JournalSelection
-        onOpenArticle={(slug) => {
-          setActiveArticle(slug);
-          setActiveJournal("article");
-        }}
-        onOpenJournal={() => {
-          setActiveArticle(null);
-          setActiveJournal("archive");
-        }}
+        onOpenArticle={openJournalArticle}
+        onOpenJournal={openJournalArchive}
       />
 
       {/* Portfolio Section */}
@@ -967,24 +1024,15 @@ useEffect(() => {
 
       {activeJournal === "archive" && (
         <JournalArchive
-          onOpenArticle={(slug) => {
-            setActiveArticle(slug);
-            setActiveJournal("article");
-          }}
-          onClose={() => {
-            setActiveJournal(null);
-            setActiveArticle(null);
-          }}
+          onOpenArticle={openJournalArticle}
+          onClose={closeJournal}
         />
       )}
 
       {activeJournal === "article" && activeArticle && (
         <JournalArticle
           article={getJournalArticle(activeArticle)}
-          onBack={() => {
-            setActiveArticle(null);
-            setActiveJournal("archive");
-          }}
+          onBack={openJournalArchive}
         />
       )}
 
