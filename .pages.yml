@@ -3,12 +3,17 @@ media:
   output: /images/journal
 
 content:
+  # ========================================
+  # JOURNAL ARTICLES
+  # ========================================
+
   - name: journal
     label: Journal Articles
     type: collection
     path: content/journal
     format: json
     filename: "{fields.slug}.json"
+
     view:
       fields:
         - title
@@ -19,6 +24,7 @@ content:
       sort:
         - eventStartDate
         - title
+
     fields:
       - name: title
         label: Article Title
@@ -64,10 +70,10 @@ content:
         type: reference
         options:
           collection: contributors
-          multiple : true
-          search : name
-          value : "{fields.slug}"
-          label : "{fields.name}"
+          multiple: true
+          search: name
+          value: "{fields.slug}"
+          label: "{fields.name}"
 
       - name: status
         label: Publication Status
@@ -86,6 +92,69 @@ content:
         label: Featured Article
         type: boolean
 
+      # ====================================
+      # PHOTO GALLERY / ARTICLE RAILS
+      # ====================================
+
+      - name: gallery
+        label: Photo Gallery
+        type: object
+        list: true
+        fields:
+          - name: src
+            label: Image Path
+            type: string
+            required: true
+
+          - name: orientation
+            label: Orientation
+            type: select
+            required: true
+            options:
+              values:
+                - portrait
+                - landscape
+
+          - name: section
+            label: Article Section
+            type: number
+            required: true
+
+          - name: position
+            label: Paragraph Position
+            type: select
+            required: true
+            options:
+              values:
+                - after-1
+                - after-2
+                - after-3
+                - after-4
+                - after-5
+                - after-6
+                - after-7
+                - after-8
+                - after-9
+                - after-10
+
+          - name: side
+            label: Rail Side
+            type: select
+            required: true
+            options:
+              values:
+                - left
+                - right
+
+          - name: group
+            label: Image Group
+            type: string
+            required: false
+
+      # ====================================
+      # ARTICLE CONTENT
+      # ====================================
+
       - name: sections
         label: Article Sections
         type: object
@@ -94,67 +163,20 @@ content:
           - name: heading
             label: Section Heading
             type: string
+            required: true
 
           - name: text
             label: Section Text
             type: rich-text
-
-          - name: blocks
-            label: Editorial Blocks
-            type: object
-            list: true
-            fields:
-              - name: type
-                label: Block Type
-                type: select
-                options:
-                  values:
-                    - image
-                    - split
-                    - pair
-                    - grid-four
-                    - editorial-three
-
-              - name: position
-                label: Position
-                type: select
-                options:
-                  values:
-                    - after-1
-                    - after-2
-                    - after-3
-                    - after-4
-                    - after-5
-                    - after-6
-                    - after-7
-                    - after-8
-                    - end
-
-              - name: imagePosition
-                label: Image Position
-                type: select
-                options:
-                  values:
-                    - left
-                    - right
-
-              - name: images
-                label: Image Paths
-                type: string
-                list: true
-
-              - name: caption
-                label: Caption
-                type: string
-
-      - name: gallery
-        label: Photo Gallery
-        type: image
-        list: true
+            required: true
 
       - name: filmUrl
         label: Film URL
         type: string
+
+  # ========================================
+  # EVENTS
+  # ========================================
 
   - name: events
     label: Events
@@ -162,6 +184,7 @@ content:
     path: content/events
     format: json
     filename: "{fields.slug}.json"
+
     fields:
       - name: name
         label: Event Name
@@ -193,12 +216,17 @@ content:
         label: Official Website
         type: string
 
+  # ========================================
+  # CONTRIBUTORS
+  # ========================================
+
   - name: contributors
     label: Contributors
     type: collection
     path: content/contributors
     format: json
     filename: "{fields.slug}.json"
+
     fields:
       - name: name
         label: Contributor Name
