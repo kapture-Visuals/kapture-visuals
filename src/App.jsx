@@ -107,6 +107,8 @@ const logos = [
   "/logos/logo-GR8.png",
   "/logos/logo-Rupteur2.0 Trackday.png",
   "/logos/logo-Motor Valley Fest.png",
+  "/logos/logo-bfd.png",
+  "logos/logo-bimmerfest.png",
   "/logos/logo-London Concours.png",
   "/logos/logo-24H Le Mans.png", 
   "/logos/logo-Supercar Madness.png",

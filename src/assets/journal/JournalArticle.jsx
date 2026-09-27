@@ -643,6 +643,40 @@ function ImageLightbox({
 }
 
 /* ----------------------------------------
+   FLOATING PROJECT CTA
+---------------------------------------- */
+
+function FloatingProjectCTA({ onBack }) {
+  const handleClick = () => {
+    // Close the article first
+    onBack();
+
+    // Wait for the homepage to render, then scroll to contact
+    window.setTimeout(() => {
+      const contactSection = document.getElementById("contact");
+
+      if (contactSection) {
+        contactSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      className="fixed bottom-6 right-6 z-[180] rounded-full bg-black px-5 py-3 text-sm font-medium text-white shadow-lg transition duration-300 hover:scale-[1.03] hover:bg-black/85 md:bottom-8 md:right-8"
+      aria-label="Start a project"
+    >
+      Start a project →
+    </button>
+  );
+}
+
+/* ----------------------------------------
    ARTICLE
 ---------------------------------------- */
 
@@ -951,6 +985,10 @@ export default function JournalArticle({
         onClose={() => setActiveImage(null)}
         onChange={setActiveImage}
       />
+      {/* FLOATING PROJECT CTA */}
+
+      <FloatingProjectCTA onBack={onBack} />
+
     </div>
   );
 }
