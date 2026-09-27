@@ -93,65 +93,6 @@ content:
         type: boolean
 
       # ====================================
-      # PHOTO GALLERY / ARTICLE RAILS
-      # ====================================
-
-      - name: gallery
-        label: Photo Gallery
-        type: object
-        list: true
-        fields:
-          - name: src
-            label: Image Path
-            type: string
-            required: true
-
-          - name: orientation
-            label: Orientation
-            type: select
-            required: true
-            options:
-              values:
-                - portrait
-                - landscape
-
-          - name: section
-            label: Article Section
-            type: number
-            required: true
-
-          - name: position
-            label: Paragraph Position
-            type: select
-            required: true
-            options:
-              values:
-                - after-1
-                - after-2
-                - after-3
-                - after-4
-                - after-5
-                - after-6
-                - after-7
-                - after-8
-                - after-9
-                - after-10
-
-          - name: side
-            label: Rail Side
-            type: select
-            required: true
-            options:
-              values:
-                - left
-                - right
-
-          - name: group
-            label: Image Group
-            type: string
-            required: false
-
-      # ====================================
       # ARTICLE CONTENT
       # ====================================
 
