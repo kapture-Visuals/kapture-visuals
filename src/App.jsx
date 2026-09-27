@@ -689,7 +689,7 @@ useEffect(() => {
         id="featured"
         className="overflow-hidden border-y border-black/10 bg-white py-20">
 
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-7xl px-6">
 
           <p className="text-sm uppercase tracking-[0.35em] text-black/40">
             Featured At
