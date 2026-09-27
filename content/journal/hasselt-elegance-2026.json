@@ -9,193 +9,37 @@
   "coverImage": "/images/journal/hasselt-elegance-2026/cover.jpg",
   "excerpt": "Where performance, luxury and a relaxed Sunday atmosphere met in the heart of Hasselt.",
   "contributors": [
-    "noah",
-    "niko"
+    "noah"
   ],
   "status": "published",
   "publishedAt": "2026-09-25",
   "featured": true,
-
   "gallery": [
-    {
-      "src": "/images/journal/hasselt-elegance-2026/pavillon-01.jpg",
-      "orientation": "portrait",
-      "section": 1,
-      "position": "after-1",
-      "side": "left"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/pavillon-02.jpg",
-      "orientation": "portrait",
-      "section": 1,
-      "position": "after-4",
-      "side": "right"
-    },
-
-    {
-      "src": "/images/journal/hasselt-elegance-2026/parking-01.jpg",
-      "orientation": "portrait",
-      "section": 2,
-      "position": "after-2",
-      "side": "left"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/parking-02.jpg",
-      "orientation": "portrait",
-      "section": 2,
-      "position": "after-2",
-      "side": "left"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/parking-03.jpg",
-      "orientation": "portrait",
-      "section": 2,
-      "position": "after-3",
-      "side": "right"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/parking-04.jpg",
-      "orientation": "portrait",
-      "section": 2,
-      "position": "after-3",
-      "side": "right"
-    },
-
-    {
-      "src": "/images/journal/hasselt-elegance-2026/parking-entrance-01.jpg",
-      "orientation": "landscape",
-      "section": 2,
-      "position": "after-4",
-      "side": "left",
-      "group": "parking-entrance"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/parking-entrance-02.jpg",
-      "orientation": "portrait",
-      "section": 2,
-      "position": "after-4",
-      "side": "left",
-      "group": "parking-entrance"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/parking-entrance-03.jpg",
-      "orientation": "landscape",
-      "section": 2,
-      "position": "after-4",
-      "side": "left",
-      "group": "parking-entrance"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/parking-entrance-04.jpg",
-      "orientation": "portrait",
-      "section": 2,
-      "position": "after-5",
-      "side": "right"
-    },
-
-    {
-      "src": "/images/journal/hasselt-elegance-2026/bugatti-chiron-01.jpg",
-      "orientation": "portrait",
-      "section": 3,
-      "position": "after-3",
-      "side": "left"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/gt3rs-manthey-01.jpg",
-      "orientation": "landscape",
-      "section": 3,
-      "position": "after-6",
-      "side": "right"
-    },
-
-    {
-      "src": "/images/journal/hasselt-elegance-2026/interior-01.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-1",
-      "side": "left"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/interior-02.jpg",
-      "orientation": "landscape",
-      "section": 4,
-      "position": "after-2",
-      "side": "right"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/interior-03.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-2",
-      "side": "right"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/interior-04.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-3",
-      "side": "left"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/interior-05.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-3",
-      "side": "left"
-    },
-
-    {
-      "src": "/images/journal/hasselt-elegance-2026/mercedes-maybach-01.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-4",
-      "side": "right"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/watch-01.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-4",
-      "side": "right"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/interior-06.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-4",
-      "side": "right"
-    },
-
-    {
-      "src": "/images/journal/hasselt-elegance-2026/interior-07.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-5",
-      "side": "left"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/interior-08.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-5",
-      "side": "left"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/dogs-01.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-5",
-      "side": "right"
-    },
-    {
-      "src": "/images/journal/hasselt-elegance-2026/dogs-02.jpg",
-      "orientation": "portrait",
-      "section": 4,
-      "position": "after-5",
-      "side": "right"
-    }
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
   ],
-
   "sections": [
     {
       "heading": "Elegance in the Heart of Hasselt",
