@@ -2,17 +2,34 @@
   "title": "Hampton Court Palace 2026",
   "slug": "hampton-court-palace-2026",
   "event": "hampton-court-palace",
-  "eventStartDate": "",
-  "eventEndDate": "",
+  "eventStartDate": "2026-06-03",
+  "eventEndDate": "2026-06-05",
   "city": "London",
   "country": "United Kingdom",
   "coverImage": "/images/journal/hampton-court-palace-2026/cover.jpg",
-  "excerpt": "",
-  "contributors": [],
-  "status": "draft",
-  "publishedAt": "",
+  "excerpt": "Exceptional cars, hidden among the gardens of Hampton Court Palace.",
+  "contributors": [
+    "noah"
+  ],
+  "status": "review",
+  "publishedAt": "2026-11-22",
   "featured": false,
-  "sections": [],
-  "gallery": [],
-  "filmUrl": ""
+  "sections": [
+    {
+      "heading": "Beyond the Palace",
+      "text": "Arriving at Hampton Court, it was not the palace itself that immediately defined the experience.\n\nUnlike Chantilly, where the château seems to watch over almost everything happening below it, Hampton Court reveals itself more gradually. Trees interrupt the architecture, long avenues lead towards different parts of the display, and the Fountain Garden becomes another scene entirely. The palace is always present, but rarely demands all of your attention.\n\nOn an unusually warm and sunny Saturday afternoon, that made the grounds especially enjoyable to explore. Cars appeared between trees and along pathways rather than feeling confined to a single exhibition lawn, while the size of the estate absorbed a crowd that was substantial without becoming overwhelming.\n\nAnd then, running along one of those avenues, came one of the strongest first impressions of the afternoon: Bentley after Bentley stretching into the distance.\n\nIt immediately established what Hampton Court did particularly well. Rather than relying on one spectacular backdrop, the property gave the cars room to create their own scenes."
+    },
+    {
+      "heading": "A Line of Continentals",
+      "text": "One of the strongest visual memories of Hampton Court came before we even reached the supercars.\n\nAlong the left-hand avenue, Bentley Continental GTs stretched into the distance, forming a line that immediately gave the display its own presence within the gardens.\n\nFor 2026, Bentley brought ten cars from its Heritage Collection to trace the evolution of the Continental GT, from the first production generation launched in 2003 to its latest interpretation.\n\nSeeing that evolution together worked particularly well at Hampton Court. The Continental has changed enormously over more than two decades, yet the basic idea remains instantly recognisable: a large, powerful grand tourer designed to cover distance with the kind of effortless pace and presence that has become central to modern Bentley.\n\nAnd visually, the display was difficult to ignore.\n\nDifferent generations, colours and specifications followed one another beneath the trees, with one red-and-black Continental in particular standing out from the line-up for us. Rather than feeling like a retrospective hidden somewhere within the concours, the cars occupied an entire avenue and became one of the defining scenes of the afternoon.\n\nThe historic side of Bentley was still very much present elsewhere. The new Finest Bentley award recognised some of the marque’s most important older cars, while Saturday’s Chairman’s Award went to the unique 1930 Speed Six All-Weather Tourer by Gill.\n\nBut personally, it was the Continental display that stayed with us.\n\nPerhaps because it felt less like looking back at distant automotive history and more like watching a familiar car evolve in front of you."
+    },
+    {
+      "heading": "The Valour We Didn't Expect",
+      "text": "If the Valkyrie impressed through engineering, the car we kept looking back at for completely different reasons was the Aston Martin Valour displayed at the Chubb stand.\n\nWe had never seen one before.\n\nFinished in Andromeda Red, the colour seemed almost impossible to pin down under the afternoon sun. Depending on the angle, the body moved between deep red, brown and warmer orange tones, exactly the kind of specification that photographs struggle to explain until you are standing beside it. Contemporary coverage from the event identified the same Chubb-displayed car in that colour.\n\nThe Valour itself is already an unusual proposition. Aston Martin created only 110 examples, one for each year of the marque at the time of its introduction, pairing a 715 PS twin-turbocharged 5.2-litre V12 with a bespoke six-speed manual gearbox. Its design deliberately looks backwards towards cars such as Aston Martin's 1970s V8 racers while using a modern carbon-fibre body.\n\nBut none of those numbers were really why it stayed with us.\n\nIt was the specification.\n\nAmong Bugattis, McLarens, historic competition cars and an entire concours worth of rarities, sometimes the car you remember most is simply the one that looks unlike anything you expected."
+    },
+    {
+      "heading": "A Garden Built for Cars",
+      "text": "The Fountain Garden provided perhaps the clearest expression of the event.\n\nCars were brought towards the presentation area beside the water, giving visitors a chance to see them isolated from the busier displays and framed against the gardens. It was a simple concept, but an effective one: the cars stopped being part of a dense collection and, briefly, became individual subjects again.\n\nThat was especially useful at an event with such variety. An Alfa Romeo could catch your attention in one direction; turn around and there might be a McLaren, Bugatti or Aston Martin waiting elsewhere. The temptation was constantly to keep moving.\n\nYet Hampton Court never felt like it needed to compete with the cars.\n\nThe Tudor architecture, fountains, trees and long avenues simply gave them somewhere exceptional to exist.\n\nThat is perhaps what separated the afternoon from Chantilly most clearly. Chantilly's château creates theatre. Hampton Court's gardens create space.\n\nAnd on a warm September afternoon, with Bentleys disappearing down one avenue and a Valkyrie sitting beneath centuries-old trees somewhere else, that was more than enough."
+    }
+  ]
 }
