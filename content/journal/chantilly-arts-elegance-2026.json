@@ -2,36 +2,198 @@
   "title": "Chantilly Arts & Élégance 2026",
   "slug": "chantilly-arts-elegance-2026",
   "event": "chantilly-arts-elegance",
-  "eventStartDate": "2026-10-05",
-  "eventEndDate": "2026-10-05",
+  "eventStartDate": "2026-09-13",
+  "eventEndDate": "2026-09-13",
   "city": "Chantilly",
   "country": "France",
   "coverImage": "/images/journal/chantilly-arts-elegance-2026/cover.jpg",
   "excerpt": "Where the setting becomes part of the spectacle, without ever taking the spotlight away from the cars.",
   "contributors": [
     "noah",
-    "niko",
-    "xavier"
+    "xavier",
+    "niko"
   ],
   "status": "published",
   "publishedAt": "2026-10-05",
   "featured": true,
+"gallery": [
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/lp570-01.jpg",
+    "orientation": "portrait",
+    "section": 1,
+    "position": "after-1",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/horse-01.jpg",
+    "orientation": "portrait",
+    "section": 1,
+    "position": "after-4",
+    "side": "right"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/fun-01.jpg",
+    "orientation": "portrait",
+    "section": 1,
+    "position": "after-4",
+    "side": "right"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/fun-02.jpg",
+    "orientation": "portrait",
+    "section": 1,
+    "position": "after-4",
+    "side": "right"
+  },
+
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/interior-01.jpg",
+    "orientation": "portrait",
+    "section": 2,
+    "position": "after-5",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/interior-02.jpg",
+    "orientation": "landscape",
+    "section": 2,
+    "position": "after-5",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/interior-03.jpg",
+    "orientation": "portrait",
+    "section": 2,
+    "position": "after-5",
+    "side": "left"
+  },
+
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/brouillard-01.jpg",
+    "orientation": "landscape",
+    "section": 3,
+    "position": "after-3",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/brouillard-02.jpg",
+    "orientation": "portrait",
+    "section": 3,
+    "position": "after-3",
+    "side": "left"
+  },
+
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-01.jpg",
+    "orientation": "landscape",
+    "section": 3,
+    "position": "after-6",
+    "side": "right"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-02.jpg",
+    "orientation": "portrait",
+    "section": 3,
+    "position": "after-6",
+    "side": "right"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-03.jpg",
+    "orientation": "portrait",
+    "section": 3,
+    "position": "after-6",
+    "side": "right"
+  },
+
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-04.jpg",
+    "orientation": "portrait",
+    "section": 3,
+    "position": "after-10",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-05.jpg",
+    "orientation": "portrait",
+    "section": 3,
+    "position": "after-10",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-06.jpg",
+    "orientation": "portrait",
+    "section": 3,
+    "position": "after-10",
+    "side": "left"
+  },
+
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-07.jpg",
+    "orientation": "portrait",
+    "section": 3,
+    "position": "after-14",
+    "side": "right"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-08.jpg",
+    "orientation": "portrait",
+    "section": 3,
+    "position": "after-14",
+    "side": "right"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/bugatti-09.jpg",
+    "orientation": "landscape",
+    "section": 3,
+    "position": "after-14",
+    "side": "right"
+  },
+
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/f40-01.jpg",
+    "orientation": "landscape",
+    "section": 4,
+    "position": "after-12",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/f40-02.jpg",
+    "orientation": "portrait",
+    "section": 4,
+    "position": "after-12",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/f40-03.jpg",
+    "orientation": "portrait",
+    "section": 4,
+    "position": "after-12",
+    "side": "left"
+  },
+  {
+    "src": "/images/journal/chantilly-arts-elegance-2026/f40-04.jpg",
+    "orientation": "portrait",
+    "section": 4,
+    "position": "after-12",
+    "side": "left"
+  }
+],
   "sections": [
-    {
-      "heading": "A Different Scale",
-      "text": "Even before reaching the heart of the Domaine de Chantilly, it was clear that this would be a very different kind of automotive event.\n\nCars were already appearing around the entrance to the château, with remarkable machinery parked across a venue that seemed to keep unfolding as we walked further into it. A Lamborghini Gallardo LP 570-4 was among the first cars to catch our attention, but it was only a small indication of what waited beyond.\n\nThe scale of Chantilly is difficult to understand until you experience it. The château, gardens and vast lawns provide enough room for hundreds of cars without reducing the event to rows of metal arranged on an exhibition floor. Instead, every part of the Domaine seemed to reveal something different.\n\nAnd the cars were only one layer of it.\n\nHorse-drawn carriages moved through the grounds. Jugglers and performers appeared between the crowds. Food trucks, music and entertainment filled the spaces between the automotive displays. Everywhere we looked, something was happening.\n\nThe crowd itself became part of that spectacle. Suits, dresses, hats and carefully considered outfits were everywhere, some visitors appearing almost as meticulously presented as the cars standing beside them.\n\nYet remarkably, none of it felt forced.\n\nThere was an unmistakably aristocratic atmosphere to Chantilly, but without the sense that luxury was being performed simply for its own sake. The clothes, the people, the château and the cars all seemed to belong in the same picture.\n\nEnglish, French and Spanish conversations mixed together as we moved through a crowd that felt noticeably international.\n\nFor a day, the entire Domaine had become the event."
-    },
-    {
-      "heading": "Where Elegance Meets the Automobile",
-      "text": "What makes Chantilly particularly impressive is how naturally the automotive world fits into its surroundings.\n\nFerrari, Porsche, Alpine, Bugatti and countless historic machines were spread across the estate, while clubs and collectors transformed the lawns into something closer to a temporary open-air automotive museum.\n\nAt another event, an exceptional car can sometimes feel like an object simply placed on a stand.\n\nAt Chantilly, the environment becomes part of its presentation.\n\nThe château rises behind the cars. The gardens extend beyond them. Historic architecture, water, trees and carefully arranged lawns provide a backdrop that would be almost impossible to reproduce elsewhere.\n\nYet the setting never overwhelms what has come to occupy it.\n\nThat balance is perhaps the most remarkable part of Chantilly. There is an enormous amount competing for your attention, the people, the architecture, the fashion, the scale of the Domaine itself, but the cars somehow remain at the centre of everything.\n\nThe choice of machinery plays a major role in that.\n\nThese are cars capable of holding their own against one of France's most spectacular estates. Historic automobiles feel entirely at home in front of the château, while modern performance cars create a striking contrast with their surroundings.\n\nNothing feels excessive simply for the sake of being excessive.\n\nNothing feels fake.\n\nInstead, prestige, automotive history and contemporary performance seem to coexist naturally.\n\nYou feel absorbed into the event simply by walking through it, but never get the impression that the visitors themselves are supposed to be the main attraction.\n\nWe are part of the scene.\n\nThe cars are the reason it exists."
-    },
-    {
-      "heading": "Bugatti, in Formation",
-      "text": "Among everything we encountered that Sunday, one display stood above almost everything else.\n\nBugatti.\n\nAt its centre was the **Brouillard**, the first one-of-one creation of Bugatti's Programme Solitaire and one of the most anticipated cars of the weekend. Commissioned for the Perridon Collection, its presence alone would have been enough to make the Bugatti area memorable.\n\nBut it was surrounded by a line-up that could have formed an event of its own.\n\nTwo W16 Mistrals.\n\nA Chiron.\n\nFive Veyrons.\n\nDifferent chapters of modern Bugatti history sitting only metres apart, with the Brouillard representing the marque's latest exploration of bespoke coachbuilding.\n\nSeeing them together gave the display a significance that went beyond individual specifications.\n\nThe Veyron changed the limits of the modern production car. The Chiron pushed that philosophy further. The Mistral became the final expression of Bugatti's W16 era, while the Brouillard represented something considerably more individual and bespoke.\n\nAnd against the Domaine de Chantilly, they somehow looked entirely at home.\n\nThe display was one of those rare occasions where it was almost difficult to decide what to photograph first. Wide enough to capture the entire line-up, close enough to study the details, then back again as another angle revealed itself.\n\nFerrari, Porsche and countless other remarkable cars surrounded them throughout the day, but whenever we returned to the Bugatti display, it still felt special.\n\nAnd impressive as they were standing still, the moment that ultimately defined our experience of Chantilly was still to come."
-    },
-    {
-      "heading": "When the Engines Took Over",
-      "text": "Eventually, the Bugattis began to leave their display.\n\nOne by one, engines fired into life.\n\nThe crowd shifted towards the route. Cameras came up. Cars that had spent much of the afternoon being examined almost like pieces of sculpture suddenly reminded everyone that they were machines designed to move.\n\nHearing them start was already enough to change the atmosphere.\n\nWatching them appear together was something else entirely.\n\nThe Brouillard moved towards the parade alongside the rest of the Bugatti line-up, and for a few minutes everything that made Chantilly distinctive seemed to exist within the same scene.\n\nBugattis moving together.\n\nThe gardens behind them.\n\nThe water stretching alongside the route.\n\nSails and flags visible in the distance.\n\nPeople lining the edge of the parade.\n\nIt became one of those rare automotive moments where the location matters almost as much as the cars themselves.\n\nShortly afterwards came another spectacle: a parade of Ferrari F40s, their familiar silhouettes moving through the same environment and replacing the polished stillness of the concours with sound, movement and theatre.\n\nThat contrast ultimately defined Chantilly for us.\n\nFor most of the day, the cars could be studied in extraordinary surroundings, surrounded by elegant crowds, architecture, gardens and a carefully curated atmosphere.\n\nThen the engines started.\n\nAnd everything else briefly became background.\n\nDespite its scale, its prestige and the thousands of people moving through the Domaine, Chantilly never seemed to forget what should occupy the centre of the experience.\n\nThe château is spectacular.\n\nThe clothes are beautiful.\n\nThe atmosphere is unique.\n\nBut when a line of Bugattis begins to move across the gardens of Chantilly, there is very little doubt about who the real protagonists are."
-    }
-  ]
+  {
+    "heading": "A Different Scale",
+    "text": "Even before reaching the heart of the Domaine de Chantilly, it was clear that this would be a very different kind of automotive event.\n\nCars were already appearing around the entrance to the château, with remarkable machinery parked across a venue that seemed to keep unfolding as we walked further into it. A Lamborghini Gallardo LP 570-4 was among the first cars to catch our attention, but it was only a small indication of what waited beyond.\n\nThe scale of Chantilly is difficult to understand until you experience it. The château, gardens and vast lawns provide enough room for hundreds of cars without reducing the event to rows of metal arranged on an exhibition floor. Instead, every part of the Domaine seemed to reveal something different.\n\nAnd the cars were only one layer of it.\n\nHorse-drawn carriages moved through the grounds. Jugglers and performers appeared between the crowds. Food trucks, music and entertainment filled the spaces between the automotive displays. Everywhere we looked, something was happening.\n\nThe crowd itself became part of that spectacle. Suits, dresses, hats and carefully considered outfits were everywhere, some visitors appearing almost as meticulously presented as the cars standing beside them.\n\nYet remarkably, none of it felt forced.\n\nThere was an unmistakably aristocratic atmosphere to Chantilly, but without the sense that luxury was being performed simply for its own sake. The clothes, the people, the château and the cars all seemed to belong in the same picture.\n\nEnglish, French and Spanish conversations mixed together as we moved through a crowd that felt noticeably international.\n\nFor a day, the entire Domaine had become the event."
+  },
+  {
+    "heading": "Where Elegance Meets the Automobile",
+    "text": "What makes Chantilly particularly impressive is how naturally the automotive world fits into its surroundings.\n\nFerrari, Porsche, Alpine, Bugatti and countless historic machines were spread across the estate, while clubs and collectors transformed the lawns into something closer to a temporary open-air automotive museum.\n\nAt another event, an exceptional car can sometimes feel like an object simply placed on a stand.\n\nAt Chantilly, the environment becomes part of its presentation.\n\nThe château rises behind the cars. The gardens extend beyond them. Historic architecture, water, trees and carefully arranged lawns provide a backdrop that would be almost impossible to reproduce elsewhere.\n\nYet the setting never overwhelms what has come to occupy it.\n\nThat balance is perhaps the most remarkable part of Chantilly. There is an enormous amount competing for your attention, the people, the architecture, the fashion, the scale of the Domaine itself, but the cars somehow remain at the centre of everything.\n\nThe choice of machinery plays a major role in that.\n\nThese are cars capable of holding their own against one of France's most spectacular estates. Historic automobiles feel entirely at home in front of the château, while modern performance cars create a striking contrast with their surroundings.\n\nNothing feels excessive simply for the sake of being excessive.\n\nNothing feels fake.\n\nInstead, prestige, automotive history and contemporary performance seem to coexist naturally.\n\nYou feel absorbed into the event simply by walking through it, but never get the impression that the visitors themselves are supposed to be the main attraction.\n\nWe are part of the scene.\n\nThe cars are the reason it exists."
+  },
+  {
+    "heading": "Bugatti, in Formation",
+    "text": "Among everything we encountered that Sunday, one display stood above almost everything else.\n\nBugatti.\n\nAt its centre was the Brouillard, the first one-of-one creation of Bugatti's Programme Solitaire and one of the most anticipated cars of the weekend. Commissioned for the Perridon Collection, its presence alone would have been enough to make the Bugatti area memorable.\n\nBut it was surrounded by a line-up that could have formed an event of its own.\n\nTwo W16 Mistrals.\n\nA Chiron.\n\nFive Veyrons.\n\nDifferent chapters of modern Bugatti history sitting only metres apart, with the Brouillard representing the marque's latest exploration of bespoke coachbuilding.\n\nSeeing them together gave the display a significance that went beyond individual specifications.\n\nThe Veyron changed the limits of the modern production car. The Chiron pushed that philosophy further. The Mistral became the final expression of Bugatti's W16 era, while the Brouillard represented something considerably more individual and bespoke.\n\nAnd against the Domaine de Chantilly, they somehow looked entirely at home.\n\nThe display was one of those rare occasions where it was almost difficult to decide what to photograph first. Wide enough to capture the entire line-up, close enough to study the details, then back again as another angle revealed itself.\n\nFerrari, Porsche and countless other remarkable cars surrounded them throughout the day, but whenever we returned to the Bugatti display, it still felt special.\n\nAnd impressive as they were standing still, the moment that ultimately defined our experience of Chantilly was still to come."
+  },
+  {
+    "heading": "When the Engines Took Over",
+    "text": "Eventually, the Bugattis began to leave their display.\n\nOne by one, engines fired into life.\n\nThe crowd shifted towards the route. Cameras came up. Cars that had spent much of the afternoon being examined almost like pieces of sculpture suddenly reminded everyone that they were machines designed to move.\n\nHearing them start was already enough to change the atmosphere.\n\nWatching them appear together was something else entirely.\n\nThe Brouillard moved towards the parade alongside the rest of the Bugatti line-up, and for a few minutes everything that made Chantilly distinctive seemed to exist within the same scene.\n\nBugattis moving together.\n\nThe gardens behind them.\n\nThe water stretching alongside the route.\n\nSails and flags visible in the distance.\n\nPeople lining the edge of the parade.\n\nIt became one of those rare automotive moments where the location matters almost as much as the cars themselves.\n\nShortly afterwards came another spectacle: a parade of Ferrari F40s, their familiar silhouettes moving through the same environment and replacing the polished stillness of the concours with sound, movement and theatre.\n\nThat contrast ultimately defined Chantilly for us.\n\nFor most of the day, the cars could be studied in extraordinary surroundings, surrounded by elegant crowds, architecture, gardens and a carefully curated atmosphere.\n\nThen the engines started.\n\nAnd everything else briefly became background.\n\nDespite its scale, its prestige and the thousands of people moving through the Domaine, Chantilly never seemed to forget what should occupy the centre of the experience.\n\nThe château is spectacular.\n\nThe setting is extraordinary.\n\nBut the cars are what bring it to life."
+  }
+]
 }
