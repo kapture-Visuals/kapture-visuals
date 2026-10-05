@@ -113,6 +113,7 @@ const logos = [
   "/logos/logo-24H Le Mans.png", 
   "/logos/logo-Supercar Madness.png",
   "/logos/logo-Chantilly.png",
+  "/logos/logo-autoworld.png",
   "/logos/logo-Zoute Grand Prix.png",
 ];
 
