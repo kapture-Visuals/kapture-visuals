@@ -683,7 +683,10 @@ function FloatingProjectCTA({ onBack }) {
 
 export default function JournalArticle({
   article,
+  articles = [],
   onBack,
+  onHome,
+  onOpenArticle,
 }) {
   const [activeImage, setActiveImage] =
     useState(null);
@@ -693,6 +696,20 @@ export default function JournalArticle({
   const contributors = article
     ? getArticleContributors(article)
     : [];
+  
+    const currentArticleIndex = articles.findIndex(
+  (item) => item.slug === article?.slug
+);
+
+const previousArticle =
+  currentArticleIndex >= 0 && currentArticleIndex < articles.length - 1
+    ? articles[currentArticleIndex + 1]
+    : null;
+
+const nextArticle =
+  currentArticleIndex > 0
+    ? articles[currentArticleIndex - 1]
+    : null;
 
   const gallery = useMemo(
     () => (article ? getGallery(article) : []),
@@ -975,6 +992,113 @@ export default function JournalArticle({
       )}
 
       {/* ==================================
+          ARTICLE NAVIGATION
+      ================================== */}
+
+      <section className="border-t border-black/10 px-6 py-16 md:px-10 md:py-20">
+        <div className="mx-auto max-w-7xl">
+
+          <p className="mb-8 text-xs uppercase tracking-[0.3em] text-black/40">
+            CONTINUE EXPLORING
+          </p>
+
+          <div className="grid gap-5 md:grid-cols-[1fr_auto_1fr] md:items-stretch">
+
+            {/* PREVIOUS ARTICLE */}
+
+            <div>
+              {previousArticle ? (
+                <button
+                  type="button"
+                  onClick={() => onOpenArticle(previousArticle.slug)}
+                  className="group relative block h-full min-h-[220px] w-full overflow-hidden rounded-2xl bg-black text-left"
+                >
+                  {previousArticle.coverImage && (
+                    <img
+                      src={previousArticle.coverImage}
+                      alt={previousArticle.title}
+                      className="absolute inset-0 h-full w-full object-cover opacity-70 transition duration-500 group-hover:scale-105 group-hover:opacity-60"
+                    />
+                  )}
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/10" />
+
+                  <div className="relative flex h-full min-h-[220px] flex-col justify-end p-6 text-white">
+                    <span className="mb-2 text-xs uppercase tracking-[0.25em] text-white/60">
+                      ← Previous article
+                    </span>
+
+                    <span className="text-xl font-semibold">
+                      {previousArticle.title}
+                    </span>
+                  </div>
+                </button>
+              ) : (
+                <div />
+              )}
+            </div>
+
+            {/* JOURNAL / HOME */}
+
+            <div className="flex min-w-[190px] flex-col items-center justify-center gap-4 py-6 md:px-5">
+              <button
+                type="button"
+                onClick={onBack}
+                className="text-sm font-medium text-black transition hover:opacity-50"
+              >
+                Back to Journal
+              </button>
+
+              <span className="h-px w-8 bg-black/15" />
+
+              <button
+                type="button"
+                onClick={onHome}
+                className="text-sm text-black/45 transition hover:text-black"
+              >
+                Back to Homepage
+              </button>
+            </div>
+
+            {/* NEXT ARTICLE */}
+
+            <div>
+              {nextArticle ? (
+                <button
+                  type="button"
+                  onClick={() => onOpenArticle(nextArticle.slug)}
+                  className="group relative block h-full min-h-[220px] w-full overflow-hidden rounded-2xl bg-black text-left"
+                >
+                  {nextArticle.coverImage && (
+                    <img
+                      src={nextArticle.coverImage}
+                      alt={nextArticle.title}
+                      className="absolute inset-0 h-full w-full object-cover opacity-70 transition duration-500 group-hover:scale-105 group-hover:opacity-60"
+                    />
+                  )}
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/10" />
+
+                  <div className="relative flex h-full min-h-[220px] flex-col justify-end p-6 text-white">
+                    <span className="mb-2 text-xs uppercase tracking-[0.25em] text-white/60">
+                      Next article →
+                    </span>
+
+                    <span className="text-xl font-semibold">
+                      {nextArticle.title}
+                    </span>
+                  </div>
+                </button>
+              ) : (
+                <div />
+              )}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ==================================
           CONTRIBUTORS
       ================================== */}
 
@@ -1037,6 +1161,67 @@ export default function JournalArticle({
           </div>
         </section>
       )}
+
+      {/* ==================================
+          FOOTER
+      ================================== */}
+
+      <footer className="border-t border-black/10 px-6 py-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-center">
+
+          <button
+            type="button"
+            onClick={onHome}
+            aria-label="Kapture Visuals home"
+            className="border-0 bg-transparent p-0"
+          >
+            <img
+              src="/images/logo-black.jpg"
+              alt="Kapture Visuals"
+              className="mb-6 h-30 w-auto"
+            />
+          </button>
+
+          <div className="mb-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-black/50">
+
+            <a
+              href="https://www.instagram.com/kapturevisuals.eu/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-black"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="mailto:kapture.visuals.production@gmail.com"
+              className="hover:text-black"
+            >
+              Contact
+            </a>
+
+            <a
+              href="/privacy-policy.html"
+              className="hover:text-black"
+            >
+              Privacy Policy
+            </a>
+
+            <a
+              href="/cookie-policy.html"
+              className="hover:text-black"
+            >
+              Cookie Policy
+            </a>
+
+          </div>
+
+          <p className="text-sm text-black/40">
+            © 2026 Kapture Visuals. All rights reserved.
+          </p>
+
+        </div>
+      </footer>
 
       {/* ==================================
           LIGHTBOX

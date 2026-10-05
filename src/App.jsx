@@ -6,7 +6,10 @@ import WorkGallery from "./WorkGallery";
 import JournalSelection from "./assets/journal/JournalSelection";
 import JournalArchive from "./assets/journal/JournalArchive";
 import JournalArticle from "./assets/journal/JournalArticle";
-import { getJournalArticle } from "./assets/journal/JournalData";
+import {
+  getJournalArticle,
+  journalArticles,
+} from "./assets/journal/JournalData";
 
 
 const content = {
@@ -1033,7 +1036,10 @@ useEffect(() => {
       {activeJournal === "article" && activeArticle && (
         <JournalArticle
           article={getJournalArticle(activeArticle)}
+          articles={journalArticles}
           onBack={openJournalArchive}
+          onHome={closeJournal}
+          onOpenArticle={openJournalArticle}
         />
       )}
 
