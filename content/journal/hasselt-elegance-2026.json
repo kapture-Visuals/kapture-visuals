@@ -9,12 +9,11 @@
   "coverImage": "/images/journal/hasselt-elegance-2026/cover.jpg",
   "excerpt": "Where performance, luxury and a relaxed Sunday atmosphere met in the heart of Hasselt.",
   "contributors": [
-    "noah",
-    "niko"
+    "noah"
   ],
   "status": "published",
   "publishedAt": "2026-09-25",
-  "featured": true,
+  "featured": false,
   "sections": [
     {
       "heading": "Elegance in the Heart of Hasselt",
