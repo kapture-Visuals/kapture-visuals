@@ -118,6 +118,7 @@ const logos = [
   "/logos/logo-Chantilly.png",
   "/logos/logo-autoworld.png",
   "/logos/logo-Zoute Grand Prix.png",
+  "/logos/logo-eurocrew.png",
 ];
 
 export default function KaptureVisualsWebsite() {
