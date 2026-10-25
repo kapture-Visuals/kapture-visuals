@@ -9,11 +9,12 @@
   "coverImage": "/images/journal/autoworld-40th-anniversary-2026/cover.jpg",
   "excerpt": "Forty years of automotive history, brought together inside and outside the museum.",
   "contributors": [
-    "noah"
+    "noah",
+    "niko"
   ],
   "status": "published",
   "publishedAt": "2026-10-17",
-  "featured": false,
+  "featured": true,
   "sections": [
     {
       "heading": "The Esplanade Comes Alive",
