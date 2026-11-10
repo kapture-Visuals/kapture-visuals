@@ -2,17 +2,13 @@
   "title": "Motor Valley Fest 2026",
   "slug": "motor-valley-fest-2026",
   "event": "motor-valley-fest",
-  "eventStartDate": "",
-  "eventEndDate": "",
+  "eventStartDate": "2026-11-10",
+  "eventEndDate": "2026-11-10",
   "city": "Modena",
   "country": "Italy",
   "coverImage": "/images/journal/motor-valley-fest-2026/cover.jpg",
-  "excerpt": "",
-  "contributors": [],
+  "excerpt": "zz",
   "status": "draft",
-  "publishedAt": "",
-  "featured": false,
-  "sections": [],
-  "gallery": [],
-  "filmUrl": ""
+  "publishedAt": "2026-11-10",
+  "featured": false
 }
